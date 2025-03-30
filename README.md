@@ -11,7 +11,7 @@
 
 ## Figma
 
-[ACM UCR Website Template Figma Design File](https://www.figma.com/)
+[Wushu Website Figma](https://www.figma.com/design/lXxK9insCgoiGuJpBJa2Rk/WUSHU?node-id=0-1&p=f)
 
 ## Node.js
 
