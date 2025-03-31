@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Arimo, Inter, Magra } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const arimo = Arimo({
   subsets: ["latin"],
@@ -34,9 +36,11 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`h-screen ${arimo.className} ${inter.className} ${magra.className}`}
+        className={`w-screen ${arimo.className} ${inter.className} ${magra.className}`}
       >
+        <Navbar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
+        <Footer />
       </body>
     </html>
   );

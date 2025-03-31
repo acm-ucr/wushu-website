@@ -1,9 +1,9 @@
-const Home = () => {
+const ContactUs = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      Home
+      ContactUs
     </div>
   );
 };
 
-export default Home;
+export default ContactUs;

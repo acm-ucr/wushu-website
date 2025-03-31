@@ -1,9 +1,9 @@
-const Home = () => {
+const Calendar = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      Home
+      Calendar
     </div>
   );
 };
 
-export default Home;
+export default Calendar;
