@@ -33,7 +33,9 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={`h-screen ${arimo.className} ${inter.className} ${magra.className}`}>
+      <body
+        className={`h-screen ${arimo.className} ${inter.className} ${magra.className}`}
+      >
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
       </body>
     </html>
