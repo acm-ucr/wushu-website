@@ -1,9 +1,9 @@
-const Home = () => {
+const Performances = () => {
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      Home
+      Performances
     </div>
   );
 };
 
-export default Home;
+export default Performances;
