@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Arimo, Inter, Magra, Khula } from "next/font/google";
+import { Arimo, Inter, Magra } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -14,12 +14,6 @@ const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--inter-font",
-});
-
-const khula = Khula({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--khula-font",
 });
 
 const magra = Magra({
@@ -42,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`w-screen ${arimo.className} ${inter.className} ${magra.className} ${khula.className}`}
+        className={`w-screen ${arimo.className} ${inter.className} ${magra.className}`}
       >
         <Navbar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
