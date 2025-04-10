@@ -19,7 +19,6 @@ module.exports = {
         arimo: ["var(--font-arimo)"],
         inter: ["var(--font-inter)"],
         magra: ["var(--font-magra)"],
-        khula: ["var(--font-khula)"],
       },
     },
   },
