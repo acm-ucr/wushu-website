@@ -12,7 +12,7 @@ export const tags = [
     link: "/gallery",
   },
   {
-    name: "Contact Us",
+    name: "Contact US",
     link: "/contact",
   },
   {
