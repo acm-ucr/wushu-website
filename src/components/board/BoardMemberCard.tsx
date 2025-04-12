@@ -26,12 +26,10 @@ const BoardMemberCard: React.FC<BoardMemberCardProps> = ({
         {title}
       </div>
       <div className="text-wushu-red-100 text-4xl leading-0 italic">{name}</div>
-      <br />
-      <br />
-      <div className="text-wushu-gold-200 text-center text-3xl leading-10">
-        {year} <br />
-        {major} <br />
-        {pronouns} <br />
+      <div className="text-wushu-gold-200 flex flex-col pt-12 text-center text-3xl leading-10">
+        <div>{year}</div>
+        <div>{major}</div>
+        <div>{pronouns}</div>
       </div>
     </div>
   );
