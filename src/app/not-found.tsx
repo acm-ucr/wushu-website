@@ -1,5 +1,24 @@
+import Image from "next/image";
+import errorPic from "@/public/logos/wushuback.svg";
+
 const NotFound = () => {
-  return <div>404 Page Not Found</div>;
+  return (
+    <div className="bg-wushu-cream-100 flex min-h-screen flex-col items-center justify-center">
+      <Image
+        src={errorPic}
+        alt="Wushu @ UCR logo with a crane posed above holding a sword."
+        width={400}
+        height={400}
+      />
+      <div className="p-5 text-center text-6xl font-bold text-red-700">
+        404 Error
+      </div>
+      <div className="text-2xl text-red-700">
+        Oops! Sorry we couldn't find the
+      </div>
+      <div className="text-2xl text-red-700">page you were looking for!</div>
+    </div>
+  );
 };
 
 export default NotFound;
