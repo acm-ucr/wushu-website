@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Maragsa Display";
-  src: url("../../public/fonts/margasa/Maragsâ-Display.otf") format("opentype");
+  src: url("/public/fonts/margasa/Maragsâ-Display.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
