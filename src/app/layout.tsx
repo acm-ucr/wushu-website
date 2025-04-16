@@ -42,7 +42,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`w-screen ${arimo.className} ${inter.className} ${magra.className}`}
+        className={`w-screen ${arimo.className} ${inter.className} ${khula.className} ${magra.className}`}
       >
         <Navbar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
