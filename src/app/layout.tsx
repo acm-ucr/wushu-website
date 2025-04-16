@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Arimo, Inter, Magra } from "next/font/google";
+import { Arimo, Inter, Magra, Khula } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -17,6 +17,12 @@ const inter = Inter({
 });
 
 const magra = Magra({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--magra-font",
+});
+
+const khula = Khula({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--magra-font",

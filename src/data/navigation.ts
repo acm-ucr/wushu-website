@@ -4,23 +4,23 @@ export const tags = [
     link: "/",
   },
   {
-    name: "Performances",
+    name: "PERFORMANCES",
     link: "/performances",
   },
   {
-    name: "Gallery",
+    name: "GALERY",
     link: "/gallery",
   },
   {
-    name: "Contact US",
+    name: "CONTACT US",
     link: "/contact",
   },
   {
-    name: "Board",
+    name: "BOARD",
     link: "/board",
   },
   {
-    name: "Calendar",
+    name: "CALENDAR",
     link: "/calendar",
   },
 ];

@@ -10,9 +10,9 @@ const Navbar = () => {
   return (
     <div className="bg-wushu-cream-100 border-wushu-red-100 sticky top-0 flex w-full items-end border-b-2">
       <Link href="/">
-        <Image src={WushuLogo} alt="WushuLogo" className="my-[1vw]" />
+        <Image src={WushuLogo} alt="WushuLogo" className="my-[1vw] w-[28vw]" />
       </Link>
-      <div className="text-wushu-red-100 flex w-full justify-end gap-8 pr-20 text-[2.3vw] whitespace-nowrap">
+      <div className="text-wushu-red-100 font-khula flex w-full justify-end gap-8 pr-20 text-[2.5vw] tracking-tight whitespace-nowrap">
         {tags.map(({ name, link }, index) => (
           <Link
             href={link}
