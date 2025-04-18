@@ -19,7 +19,7 @@ const BoardMemberCard: React.FC<BoardMemberCardProps> = ({
   pronouns,
 }) => {
   return (
-    <div className="justify-items-center font-arimo -tracking-[0.1em] whitespace-nowrap">
+    <div className="font-arimo justify-items-center -tracking-[0.1em] whitespace-nowrap">
       <Image src={photo} alt={`Photo of ${name}`} />
       <div className="text-wushu-red-100 text-5xl leading-24 font-bold italic">
         {position}
