@@ -10,13 +10,15 @@ const NotFound = () => {
         width={400}
         height={400}
       />
-      <div className="p-5 text-center text-6xl font-bold text-red-700">
+      <div className="text-wushu-red-100 font-arimo p-2 text-center text-7xl font-bold">
         404 Error
       </div>
-      <div className="text-2xl text-red-700">
+      <div className="text-wushu-red-100 font-arimo text-2xl">
         Oops! Sorry we couldn't find the
       </div>
-      <div className="text-2xl text-red-700">page you were looking for!</div>
+      <div className="text-wushu-red-100 font-arimo text-2xl">
+        page you were looking for!
+      </div>
     </div>
   );
 };

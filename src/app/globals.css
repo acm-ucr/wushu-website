@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Maragsa Display";
+  src: url("/public/fonts/margasa/Maragsâ-Display.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-wushu-red-100: #c30000;
   --color-wushu-red-200: #8a0000;
@@ -9,4 +17,10 @@
   --color-wushu-brick-100: #c1322c;
   --color-wushu-black-100: #000000;
   --color-wushu-white-100: #ffffff;
+
+  --font-arimo: "Arimo";
+  --font-inter: "Inter", serif;
+  --font-khula: "Khula", serif;
+  --font-margasa: "Maragsa Display", serif;
+  --font-amaranth: "Amaranth", serif;
 }
