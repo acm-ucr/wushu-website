@@ -5,7 +5,7 @@ import LocationAndTime from "@/components/home/LocationAndTime";
 const Home = () => {
   return (
     <div>
-      <div className="flex h-screen w-screen items-center justify-center">
+      <div className="font-arimo flex h-screen w-screen items-center justify-center">
         <Example text1="Adjust" text2="these" text3="Props" />
       </div>
       <div className="flex h-screen w-screen items-center justify-center">
