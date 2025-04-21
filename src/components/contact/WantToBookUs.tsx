@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import GroupPhoto from "@/public/images/contact_us/want_to_book_us.webp";
 import BookUsHere from "@/public/images/contact_us/book_us_here.svg";
@@ -12,11 +13,13 @@ const WantToBookUs = () => {
             Please fill out the form and provide us with a time, location, and
             any other details!
           </div>
-          <Image
-            src={BookUsHere}
-            alt="Book Us Here Link"
-            className="m-20 w-sm object-contain"
-          />
+          <Link href="/book-us">
+            <Image
+              src={BookUsHere}
+              alt="Book Us Here Link"
+              className="m-20 w-sm object-contain"
+            />
+          </Link>
         </div>
         <Image
           src={GroupPhoto}
