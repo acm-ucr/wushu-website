@@ -16,9 +16,9 @@ const MeetTheBoard = () => {
 
       {/* Right: Title + Paragraph */}
       <div className="font-playfair w-full text-[#b42422] md:w-1/2">
-        <h2 className="text-4xl leading-snug font-extrabold drop-shadow-md md:text-5xl">
+        <h2 className="text-4xl leading-snug font-extrabold drop-shadow-md md:text-7xl">
           MEET THE <br />
-          <span className="text-[#f2cc4c] drop-shadow-lg">2024–2025</span> BOARD
+          <span className="text-[#f2cc4c] drop-shadow-lg">2024–2025</span> <br /> BOARD
         </h2>
 
         <p className="mt-6 text-base leading-relaxed font-medium text-red-700 md:text-lg">
