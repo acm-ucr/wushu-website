@@ -23,7 +23,7 @@ const WantToBookUs = () => {
                 alt="Wushu Logo"
                 className="h-[20vh] object-contain"
               />
-              <div className="text-wushu-red-100 font-amaranth flex text-left text-4xl font-bold w-[110%]">
+              <div className="text-wushu-red-100 font-amaranth flex w-[110%] text-left text-4xl font-bold">
                 BOOK US HERE!
               </div>
             </Link>
