@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import GroupPhoto from "@/public/images/contact_us/want_to_book_us.webp";
-import BookUsHere from "@/public/images/contact_us/book_us_here.svg";
+import WushuLogo from "@/public/logos/wushufront.svg";
 const WantToBookUs = () => {
   return (
     <div>
@@ -13,13 +13,21 @@ const WantToBookUs = () => {
             Please fill out the form and provide us with a time, location, and
             any other details!
           </div>
-          <Link href="/book-us">
-            <Image
-              src={BookUsHere}
-              alt="Book Us Here Link"
-              className="m-20 w-sm object-contain"
-            />
-          </Link>
+          <div className="flex h-full w-full items-center justify-center">
+            <Link
+              className="border-wushu-gold-100 flex h-[25vh] w-[25vw] items-center justify-center rounded-2xl border-8 bg-white"
+              href="book-us"
+            >
+              <Image
+                src={WushuLogo}
+                alt="Wushu Logo"
+                className="h-[20vh] w-[20vw]"
+              />
+              <div className="text-wushu-red-100 font-amaranth flex text-left text-5xl">
+                BOOK US HERE!
+              </div>
+            </Link>
+          </div>
         </div>
         <Image
           src={GroupPhoto}
