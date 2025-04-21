@@ -3,9 +3,9 @@ import { BoardMembers } from "../../data/BoardMembers";
 
 const Board = () => {
   return (
-    <div className="grid grid-cols-3 justify-items-center">
+    <div className="relative mx-auto grid w-5/6 grid-cols-3 justify-center gap-x-5 gap-y-12 pt-5">
       {BoardMembers.map((Member) => (
-        <div className="max-w-[348px]" key={Member.key}>
+        <div key={Member.key}>
           <BoardMemberCard
             key={Member.key}
             photo={Member.photo}

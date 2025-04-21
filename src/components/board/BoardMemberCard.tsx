@@ -21,7 +21,7 @@ const BoardMemberCard: React.FC<BoardMemberCardProps> = ({
   return (
     <div className="font-arimo justify-items-center -tracking-[0.1em] whitespace-nowrap">
       <Image src={photo} alt={`Photo of ${name}`} />
-      <div className="text-wushu-red-100 text-5xl leading-24 font-bold italic">
+      <div className="text-wushu-red-100 text-4xl leading-20 font-bold italic">
         {position}
       </div>
       <div className="text-wushu-red-100 text-4xl leading-0 italic">{name}</div>
