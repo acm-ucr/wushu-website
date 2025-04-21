@@ -1,4 +1,4 @@
-import MeetTheBoard from "@/components/board/BoardMemberCard";
+import MeetTheBoard from "@/components/board/MeetTheBoard";
 
 export default function Home() {
   return <MeetTheBoard />;
