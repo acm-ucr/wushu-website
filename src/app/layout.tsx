@@ -1,10 +1,16 @@
 import "./globals.css";
-import { Arimo, Inter, Magra, Khula } from "next/font/google";
+import { Arimo, Inter, Magra, Khula, Amaranth } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const arimo = Arimo({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--arimo-font",
+});
+
+const amaranth = Amaranth({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--arimo-font",
@@ -42,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`w-screen ${arimo.className} ${inter.className} ${khula.className} ${magra.className}`}
+        className={`w-screen ${arimo.className} ${amaranth.className} ${inter.className} ${khula.className} ${magra.className}`}
       >
         <Navbar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>

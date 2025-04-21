@@ -13,9 +13,9 @@ const WantToBookUs = () => {
             Please fill out the form and provide us with a time, location, and
             any other details!
           </div>
-          <div className="flex h-full w-full items-center justify-center">
+          <div className="flex h-full w-[90%] items-center justify-center">
             <Link
-              className="border-wushu-gold-100 flex h-[25vh] w-[25vw] items-center justify-center rounded-2xl border-8 bg-white"
+              className="border-wushu-gold-100 flex h-[25vh] w-[28vw] items-center justify-center rounded-2xl border-8 bg-white"
               href="book-us"
             >
               <Image
