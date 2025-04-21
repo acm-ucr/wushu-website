@@ -13,17 +13,17 @@ const WantToBookUs = () => {
             Please fill out the form and provide us with a time, location, and
             any other details!
           </div>
-          <div className="flex h-full w-[90%] items-center justify-center">
+          <div className="flex h-[80%] w-[80%] items-center justify-center">
             <Link
-              className="border-wushu-gold-100 flex h-[25vh] w-[28vw] items-center justify-center rounded-2xl border-8 bg-white"
+              className="border-wushu-gold-100 flex h-[24vh] w-[24vw] items-center justify-center rounded-2xl border-6 bg-white"
               href="book-us"
             >
               <Image
                 src={WushuLogo}
                 alt="Wushu Logo"
-                className="h-[20vh] w-[20vw]"
+                className="h-[20vh] object-contain"
               />
-              <div className="text-wushu-red-100 font-amaranth flex text-left text-5xl">
+              <div className="text-wushu-red-100 font-amaranth flex text-left text-4xl font-bold w-[110%]">
                 BOOK US HERE!
               </div>
             </Link>
