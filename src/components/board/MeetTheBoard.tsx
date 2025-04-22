@@ -13,9 +13,9 @@ const MeetTheBoard = () => {
         />
       </div>
 
-      <div className="w-full md:w-1/2 text-[#b42422]">
+      <div className="w-full text-[#b42422] md:w-1/2">
         <div
-          className="text-4xl md:text-7xl font-extrabold leading-snug"
+          className="text-4xl leading-snug font-extrabold md:text-7xl"
           style={{
             fontFamily: "Maragsa",
             color: "#b42422",
