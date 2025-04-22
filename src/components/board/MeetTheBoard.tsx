@@ -3,7 +3,6 @@ import Image from "next/image";
 const MeetTheBoard = () => {
   return (
     <div className="flex w-full flex-col items-center justify-center gap-10 bg-[#f8f1dc] px-6 py-10 md:flex-row md:px-20">
-      {/* Left: Group Image */}
       <div className="w-full md:w-1/2">
         <Image
           src="/images/meet_the_board/meet_the_board.webp"
@@ -14,14 +13,21 @@ const MeetTheBoard = () => {
         />
       </div>
 
-      {/* Right: Title + Paragraph */}
-      <div className="font-playfair w-full text-[#b42422] md:w-1/2">
-        <h2 className="text-4xl leading-snug font-extrabold drop-shadow-md md:text-7xl">
-          MEET THE <br />
-          <span className="text-[#f2cc4c] drop-shadow-lg">2024–2025</span> <br /> BOARD
-        </h2>
+      <div className="w-full md:w-1/2 text-[#b42422]">
+        <div
+          className="text-4xl md:text-7xl font-extrabold leading-snug"
+          style={{
+            fontFamily: "Maragsa",
+            color: "#b42422",
+            textShadow: "-2px 2px 0 #f2cc4c",
+          }}
+        >
+          <div>MEET THE</div>
+          <div>2024–2025</div>
+          <div>BOARD</div>
+        </div>
 
-        <p className="mt-6 text-base leading-relaxed font-medium text-red-700 md:text-lg">
+        <div className="mt-6 text-base leading-relaxed font-medium text-red-700 md:text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -29,7 +35,7 @@ const MeetTheBoard = () => {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa.
-        </p>
+        </div>
       </div>
     </div>
   );
