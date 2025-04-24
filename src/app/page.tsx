@@ -1,4 +1,3 @@
-import Example from "@/components/Example";
 import WhoWeAre from "@/components/home/WhoWeAre";
 
 const Home = () => {
