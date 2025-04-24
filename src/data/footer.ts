@@ -7,21 +7,21 @@ export const links = [
   {
     text: "gmail",
     icon: gmail,
-    link: "www.google.com",
+    link: "wushu.ucriverside@gmail.com",
   },
   {
     text: "youtube",
     icon: youtube,
-    link: "www.google.com",
+    link: "https://www.youtube.com/@wushuatucr5917/videos",
   },
   {
     text: "discord",
     icon: discord,
-    link: "www.google.com",
+    link: "https://discord.gg/xvCtPYCBcQ",
   },
   {
     text: "instagram",
     icon: instagram,
-    link: "www.google.com",
+    link: "https://www.instagram.com/wushuatucr/",
   },
 ];

@@ -10,8 +10,8 @@ const Footer = () => {
       <Image src={cloudfooter} alt="cloudfooter" className="w-screen" />
       <div className="flex">
         <div className="absolute bottom-0 left-0 p-10">
-          <Link href="www.google.com">
-            <Image src={logo} alt="" />
+          <Link href="/">
+            <Image src={logo} alt="" width={600} />
           </Link>
         </div>
         <div className="absolute right-0 bottom-0 flex items-center gap-8 p-10">
