@@ -8,7 +8,7 @@ export const tags = [
     link: "/performances",
   },
   {
-    name: "GALERY",
+    name: "GALLERY",
     link: "/gallery",
   },
   {

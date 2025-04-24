@@ -1,9 +1,10 @@
 import Example from "@/components/Example";
+import WhoWeAre from "@/components/home/WhoWeAre";
 
 const Home = () => {
   return (
     <div className="font-arimo flex h-screen w-screen items-center justify-center">
-      <Example text1="Adjust" text2="these" text3="Props" />
+      <WhoWeAre />
     </div>
   );
 };
