@@ -48,11 +48,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body
-<<<<<<< HEAD
-        className={`w-screen ${arimo.className} ${amaranth.className} ${inter.className} ${khula.className} ${magra.className}`}
-=======
-        className={`bg-wushu-cream-100 w-screen ${arimo.className} ${inter.className} ${khula.className} ${magra.className}`}
->>>>>>> a913a406b573e55a2e859288d1a17e4d5b8cb048
+        className={`bg-wushu-cream-100 w-screen ${arimo.className} ${amaranth.className} ${inter.className} ${khula.className} ${magra.className}`}
       >
         <Navbar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
