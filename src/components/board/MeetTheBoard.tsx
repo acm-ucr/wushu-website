@@ -2,32 +2,37 @@ import Image from "next/image";
 
 const MeetTheBoard = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-10 bg-[#f8f1dc] px-6 py-10 md:flex-row md:px-20">
+    <div className="flex flex-col items-center justify-center gap-10 bg-[#f8f1dc] px-6 py-12 md:flex-row">
+      {/* Image */}
       <div className="w-full md:w-1/2">
         <Image
           src="/images/meet_the_board/meet_the_board.webp"
           alt="Wushu Board Group Photo"
-          className="rounded-lg border-[6px] border-[#d6ae5e] shadow-xl"
           width={600}
           height={500}
+          priority
+          className="w-full rounded-lg border-4 border-[#d99f00] shadow-lg"
         />
       </div>
 
-      <div className="w-full text-[#b42422] md:w-1/2">
+      {/* Text */}
+      <div className="w-full md:w-1/2">
         <div
-          className="text-4xl leading-snug font-extrabold md:text-7xl"
+          className="text-5xl leading-tight font-bold md:text-6xl lg:text-7xl"
           style={{
-            fontFamily: "Maragsa",
-            color: "#b42422",
-            textShadow: "-2px 2px 0 #f2cc4c",
+            fontFamily: "Maragsa Display",
+            color: "#d99f00", // gold/orange on top
+            textShadow: "-3px 3px 0 #b42422", // red as shadow
           }}
         >
           <div>MEET THE</div>
           <div>2024–2025</div>
           <div>BOARD</div>
         </div>
-
-        <div className="mt-6 text-base leading-relaxed font-medium text-red-700 md:text-lg">
+        <div
+          className="mt-6 text-base leading-relaxed font-medium md:text-lg"
+          style={{ color: "#c30000" }}
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
