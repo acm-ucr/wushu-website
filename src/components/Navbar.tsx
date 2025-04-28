@@ -20,12 +20,11 @@ const Navbar = () => {
   const pathName = usePathname();
   return (
     <div className="bg-wushu-cream-100 border-wushu-red-100 sticky top-0 flex w-full items-end justify-between border-b-2">
-      {/* logo */}
       <Link href="/">
         <Image
           src={WushuLogo}
           alt="Wushu logo"
-          className="my-[1vw] w-[28vw] min-w-50"
+          className="my-3 w-1/4 min-w-50"
         />
       </Link>
 
@@ -33,7 +32,6 @@ const Navbar = () => {
         <FaBars className="text-wushu-red-100 text-3xl" />
       </div>
 
-      {/* desktop menu */}
       <div className="text-wushu-red-100 font-khula hidden w-full justify-end gap-8 pr-20 text-[2.5vw] tracking-tight whitespace-nowrap md:flex">
         {tags.map(({ name, link }, index) => (
           <Link
@@ -46,7 +44,6 @@ const Navbar = () => {
         ))}
       </div>
 
-      {/* mobile drop down menu */}
       <div
         className={`border-wushu-red-100 font-arimo text-wushu-red-100 bg-wushu-cream-100 absolute top-full right-0 flex w-1/2 flex-col border-2 md:hidden ${showMobileMenu ? animation : "hidden"}`}
       >
