@@ -32,7 +32,7 @@ const Navbar = () => {
         <FaBars className="text-wushu-red-100 text-3xl" />
       </div>
 
-      <div className="text-wushu-red-100 font-khula hidden w-full justify-end gap-8 pr-20 text-[2.5vw] tracking-tight whitespace-nowrap md:flex">
+      <div className="text-wushu-red-100 font-khula text-l hidden w-full justify-end gap-8 pr-20 tracking-tight whitespace-nowrap md:flex lg:text-2xl xl:text-3xl">
         {tags.map(({ name, link }, index) => (
           <Link
             href={link}
