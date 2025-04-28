@@ -19,21 +19,21 @@ const WantToBookUs = () => {
       <div className="pb-8 text-8xl">WANT TO BOOK US?</div>
       <div className="flex">
         <div>
-          <div className="font-arimo text-wushu-red-100 mr-8 w-[45vw] pt-8 text-4xl">
+          <div className="font-arimo text-wushu-red-100 mr-8 w-2xl pt-8 text-4xl">
             Please email us at example@email.com and provide us with a time,
             location, and any other details!
           </div>
-          <div className="flex h-[80%] w-[80%] items-center justify-center">
+          <div className="flex h-96 w-xl items-center justify-center">
             <Link
-              className="border-wushu-gold-100 flex h-[24vh] w-[24vw] items-center justify-center rounded-2xl border-6 bg-white"
+              className="border-wushu-gold-100 flex h-52 w-96 items-center justify-center rounded-2xl border-6 bg-white"
               href={email}
             >
               <Image
                 src={WushuLogo}
                 alt="Wushu Logo"
-                className="h-[20vh] object-contain"
+                className="h-40 object-contain"
               />
-              <div className="text-wushu-red-100 font-amaranth flex w-[110%] text-left text-4xl font-bold">
+              <div className="text-wushu-red-100 font-amaranth flex w-76 text-left text-5xl font-bold">
                 Email Us!
               </div>
             </Link>
