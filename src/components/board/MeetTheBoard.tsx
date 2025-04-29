@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const MeetTheBoard = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-10 bg-[#f8f1dc] px-6 py-12 md:flex-row">
+    <div className="flex flex-col items-center justify-center gap-10 bg-yellow-50 px-6 py-12 md:flex-row">
       {/* Image */}
       <div className="w-full md:w-1/2">
         <Image
@@ -11,28 +11,18 @@ const MeetTheBoard = () => {
           width={600}
           height={500}
           priority
-          className="w-full rounded-lg border-4 border-[#d99f00] shadow-lg"
+          className="w-full rounded-lg border-4 border-yellow-500 shadow-lg"
         />
       </div>
 
       {/* Text */}
       <div className="w-full md:w-1/2">
-        <div
-          className="text-5xl leading-tight font-bold md:text-6xl lg:text-7xl"
-          style={{
-            fontFamily: "Maragsa Display",
-            color: "#d99f00", // gold/orange on top
-            textShadow: "-3px 3px 0 #b42422", // red as shadow
-          }}
-        >
+        <div className="text-5xl leading-tight font-bold text-yellow-500 md:text-6xl lg:text-7xl">
           <div>MEET THE</div>
           <div>2024–2025</div>
           <div>BOARD</div>
         </div>
-        <div
-          className="mt-6 text-base leading-relaxed font-medium md:text-lg"
-          style={{ color: "#c30000" }}
-        >
+        <div className="mt-6 text-base leading-relaxed font-medium text-red-700 md:text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
