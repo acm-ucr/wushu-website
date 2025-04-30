@@ -36,12 +36,7 @@ const Footer = () => {
           </div>
 
           {links.map((item, index) => (
-            <Link
-              href={item.link}
-              target="_blank"
-              key={index}
-              className=""
-            >
+            <Link href={item.link} target="_blank" key={index} className="">
               <Image src={item.icon} alt="" />
             </Link>
           ))}
