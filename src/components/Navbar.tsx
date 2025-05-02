@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const pathName = usePathname();
   return (
-    <div className="bg-wushu-cream-100 border-wushu-red-100 sticky top-0 flex w-full items-end justify-between border-b-2">
+    <div className="bg-wushu-cream-100 border-wushu-red-100 sticky top-0 z-50 flex w-full items-end justify-between border-b-2">
       <Link href="/">
         <Image
           src={WushuLogo}
