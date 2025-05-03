@@ -17,7 +17,7 @@ const LocationAndTime = () => {
           />
         </div>
       </div>
-      <div className="text-wushu-red-100 font-arimo flex w-2/5 flex-col pt-10 text-[24px] tracking-tighter">
+      <div className="text-wushu-red-100 font-arimo flex w-2/5 flex-col pt-10 text-2xl tracking-tighter">
         <h2 className="pt-20">Location:</h2>
         <h2>MPR C</h2>
         <h2 className="pt-5">Times:</h2>
