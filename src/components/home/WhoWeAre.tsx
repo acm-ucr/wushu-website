@@ -21,7 +21,7 @@ const WhoWeAre = () => {
         <h2 className="text-wushu-gold-100 font-arimo pt-25 pb-1 text-3xl font-bold">
           WHAT IS WUSHU?
         </h2>
-        <h3 className="text-wushu-red-100 font-arimo text-[24px] font-[500] tracking-tighter">
+        <h3 className="text-wushu-red-100 font-arimo text-2xl tracking-tighter">
           Wushu, also known as kung fu, is a competitive Chinese martial art. It
           integrates concepts and forms from various traditional and modern
           Chinese martial arts, including Shaolin kung fu, tai chi, and
