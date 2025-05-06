@@ -4,7 +4,7 @@ import Link from "next/link";
 const ContactUs = () => {
   return (
     <div className="bg-wushu-cream flex w-full flex-col items-center justify-center gap-10 px-6 py-10 md:flex-row md:px-20">
-      {/* Left side - Image */}
+      {}
       <div className="w-full md:w-1/2">
         <Image
           src="/images/contact_us/contact_us.webp"
@@ -15,7 +15,7 @@ const ContactUs = () => {
         />
       </div>
 
-      {/* Right side - Contact Info */}
+      {}
       <div className="text-wushu-gold-100 w-full md:w-1/2">
         <h2 className="text-wushu-red-200 mb-4 text-3xl font-bold md:text-4xl">
           CONTACT <span className="text-wushu-gold-200">US</span>
