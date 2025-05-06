@@ -9,7 +9,7 @@ const ContactUs = () => {
         <Image
           src="/images/contact_us/contact_us.webp"
           alt="Wushu Club Contact"
-          className="ring-wushu-gold-200 h-auto w-full rounded-lg ring-4 shadow-lg"
+          className="ring-wushu-gold-200 h-auto w-full rounded-lg shadow-lg ring-4"
           width={600}
           height={400}
         />
