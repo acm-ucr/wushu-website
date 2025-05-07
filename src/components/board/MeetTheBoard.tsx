@@ -3,9 +3,7 @@ import Image from "next/image";
 const MeetTheBoard = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-10 bg-yellow-50 px-6 py-12 md:flex-row">
-      {
-        
-      }
+      {}
       <div className="w-full md:w-1/2">
         <Image
           src="/images/meet_the_board/meet_the_board.webp"
@@ -16,10 +14,7 @@ const MeetTheBoard = () => {
           className="w-full rounded-lg border-4 border-yellow-500 shadow-lg"
         />
       </div>
-
-      {
-        
-      }
+      {}
       <div className="w-full md:w-1/2">
         <div className="text-5xl leading-tight font-bold text-yellow-500 md:text-6xl lg:text-7xl">
           <div>MEET THE</div>
