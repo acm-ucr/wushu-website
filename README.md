@@ -1,4 +1,4 @@
-# ACM UCR Website Template
+# Wushu Website
 
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23407ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
@@ -11,7 +11,7 @@
 
 ## Figma
 
-[ACM UCR Website Template Figma Design File](https://www.figma.com/)
+[Wushu Website Figma](https://www.figma.com/design/lXxK9insCgoiGuJpBJa2Rk/WUSHU?node-id=0-1&p=f)
 
 ## Node.js
 

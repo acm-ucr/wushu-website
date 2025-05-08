@@ -1,7 +1,9 @@
+import WhoWeAre from "@/components/home/WhoWeAre";
+
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Hello World
+    <div className="font-arimo flex h-screen w-screen items-center justify-center">
+      <WhoWeAre />
     </div>
   );
 };
