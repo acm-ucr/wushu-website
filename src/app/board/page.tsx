@@ -1,7 +1,11 @@
+import BoardMemberMap from "@/components/board/BoardMemberMap";
+
 const Board = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Board
+    <div className="">
+      <div className="z-0">
+        <BoardMemberMap />
+      </div>
     </div>
   );
 };
