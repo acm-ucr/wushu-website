@@ -3,7 +3,9 @@ import BoardMemberMap from "@/components/board/BoardMemberMap";
 const Board = () => {
   return (
     <div className="">
-      <BoardMemberMap />
+      <div className="z-0">
+        <BoardMemberMap />
+      </div>
     </div>
   );
 };
