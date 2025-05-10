@@ -1,9 +1,11 @@
-import WhoWeAre from "@/components/home/WhoWeAre";
+import MeetTheBoard from "@/components/board/MeetTheBoard";
 
 const Home = () => {
   return (
-    <div className="font-arimo flex h-screen w-screen items-center justify-center">
-      <WhoWeAre />
-    </div>
+    <main className="font-arimo min-h-screen bg-white">
+      <MeetTheBoard />
+    </main>
   );
 };
+
+export default Home;
