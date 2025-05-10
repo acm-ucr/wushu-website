@@ -3,18 +3,21 @@ import Image from "next/image";
 
 const LocationAndTime = () => {
   return (
-    <div className="bg-wushu-cream-100 flex w-2/3 rounded-md p-10">
+    <div className="bg-wushu-cream-100 flex w-full rounded-md p-10">
       <div className="flex w-2/3 flex-col justify-items-center gap-1 rounded-md p-10">
         <div>
-          <h1 className="text-wushu-gold-100 top-left font-margasa text-5xl font-extrabold">
+          <div className="text-wushu-gold-100 top-left font-margasa pb-10 text-5xl font-extrabold">
             LOCATION AND TIMES
-          </h1>
-          <Image
-            src="/images/who_we_are/location_and_times_img.webp"
-            alt="Location and Times (shows club participants all participating in an activity)"
-            width={3000}
-            height={3000}
-          />
+          </div>
+          <div className="bg-wushu-gold-100">
+            <Image
+              src="/images/who_we_are/location_and_times_img.webp"
+              alt="Location and Times (shows club participants all participating in an activity)"
+              width={3000}
+              height={3000}
+              className="translate-x-5 -translate-y-5"
+            />
+          </div>
         </div>
       </div>
       <div className="text-wushu-red-100 font-arimo flex w-2/5 flex-col pt-10 text-2xl tracking-tighter">
