@@ -4,10 +4,10 @@ import { Weapons } from "@/data/LineBreak";
 import Image from "next/image";
 
 const LineBreak = () => {
-  const repeatedWeapons = Array(5).fill(Weapons).flat();
+  const weapons = Array(10).fill(Weapons).flat();
 
   const marqueeAnimation = {
-    animate: { x: "-50%" },
+    x: "-50%" ,
     transition: {
       duration: 10,
       ease: "linear",
@@ -19,10 +19,10 @@ const LineBreak = () => {
   return (
     <div className="relative overflow-hidden py-20 whitespace-nowrap">
       <motion.div
-        {...marqueeAnimation}
+        animate={marqueeAnimation}
         className="flex w-max gap-3 whitespace-nowrap"
       >
-        {[...repeatedWeapons, ...repeatedWeapons].map(
+        {weapons.map(
           ({ photo, name }, index) => (
             <Image key={index} src={photo} alt={name} width={40} height={40} />
           ),
