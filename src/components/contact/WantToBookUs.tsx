@@ -47,7 +47,7 @@ const WantToBookUs = () => {
         </div>
         <Image
           src={GroupPhoto}
-          alt="Wushu Grouop Photo"
+          alt="Wushu Group Photo"
           className="object-contain"
         />
       </div>

@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathName = usePathname();
   return (
-    <div className="bg-wushu-cream-100 border-wushu-red-100 sticky top-0 flex w-full items-end border-b-2">
+    <div className="bg-wushu-cream-100 border-wushu-red-100 sticky top-0 z-40 flex w-full items-end border-b-2">
       <Link href="/">
         <Image src={WushuLogo} alt="WushuLogo" className="my-[1vw] w-[28vw]" />
       </Link>
