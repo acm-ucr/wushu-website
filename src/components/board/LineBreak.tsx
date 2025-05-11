@@ -20,11 +20,13 @@ const LineBreak = () => {
     <div className="relative overflow-hidden py-20 whitespace-nowrap">
       <motion.div
         {...marqueeAnimation}
-        className="flex whitespace-nowrap gap-3 w-max"
+        className="flex w-max gap-3 whitespace-nowrap"
       >
-        {[...repeatedWeapons, ...repeatedWeapons].map(({ photo, name }, index) => (
-          <Image key={index} src={photo} alt={name} width={40} height={40} />
-        ))}
+        {[...repeatedWeapons, ...repeatedWeapons].map(
+          ({ photo, name }, index) => (
+            <Image key={index} src={photo} alt={name} width={40} height={40} />
+          ),
+        )}
       </motion.div>
     </div>
   );
