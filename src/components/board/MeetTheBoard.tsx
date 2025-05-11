@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const MeetTheBoard = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-10 bg-yellow-50 px-6 py-12 md:flex-row">
+    <div className="flex flex-col items-center justify-center gap-10 px-6 py-12 md:flex-row">
       {}
       <div className="w-full md:w-1/2">
         <Image
