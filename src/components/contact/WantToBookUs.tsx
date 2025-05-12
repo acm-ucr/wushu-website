@@ -4,7 +4,9 @@ import Image from "next/image";
 import GroupPhoto from "@/public/images/contact_us/want_to_book_us.webp";
 import WushuLogo from "@/public/logos/wushufront.svg";
 
-const email = `mailto:example@email.com?subject=${encodeURIComponent("Wushu Booking Request")}&body=${encodeURIComponent(`Hi Wushu Team,
+const email = `mailto:example@email.com?subject=${encodeURIComponent(
+  "Wushu Booking Request"
+)}&body=${encodeURIComponent(`Hi Wushu Team,
 
   I would like to book you for an event. Here are the details:
   - Time:
