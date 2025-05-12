@@ -1,11 +1,9 @@
-import WhoWeAre from "@/components/home/WhoWeAre";
-import LocationAndTime from "@/components/home/LocationAndTime";
+import ContactUs from "@/components/contact/ContactUs";
 
 const Home = () => {
   return (
-    <div className="">
-      <WhoWeAre />
-      <LocationAndTime />
+    <div className="font-arimo flex h-screen w-screen items-center justify-center">
+      <ContactUs />
     </div>
   );
 };
