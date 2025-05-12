@@ -7,12 +7,11 @@ const LineBreak = () => {
   const weapons = Array(10).fill(Weapons).flat();
 
   const marqueeAnimation = {
-    x: "-50%" ,
+    x: "-50%",
     transition: {
-      duration: 10,
+      duration: 50,
       ease: "linear",
       repeat: Infinity,
-      repeatType: "loop" as const,
     },
   };
 
@@ -22,11 +21,9 @@ const LineBreak = () => {
         animate={marqueeAnimation}
         className="flex w-max gap-3 whitespace-nowrap"
       >
-        {weapons.map(
-          ({ photo, name }, index) => (
-            <Image key={index} src={photo} alt={name} width={40} height={40} />
-          ),
-        )}
+        {weapons.map(({ photo, name }, index) => (
+          <Image key={index} src={photo} alt={name} width={40} height={40} />
+        ))}
       </motion.div>
     </div>
   );

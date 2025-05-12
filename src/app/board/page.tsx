@@ -1,6 +1,6 @@
 import MeetTheBoard from "@/components/board/MeetTheBoard";
 import BoardMemberMap from "@/components/board/BoardMemberMap";
-import LineBreak from "@/components/board/LineBreak";
+import LineBreak from "@/components/LineBreak";
 const Board = () => {
   return (
     <div className="">
