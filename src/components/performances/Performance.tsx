@@ -17,23 +17,19 @@ const Performance = ({
 }: PerformanceProps) => {
   return (
     <div
-      className={`mt-2 flex items-center gap-3 sm:mt-10 sm:gap-3 md:flex-row md:gap-0 ${imageOnLeft ? "flex md:flex-row" : "flex-row-reverse md:flex-row-reverse"}`}
+      className={`mt-11 flex items-center md:flex-row ${imageOnLeft ? "flex md:flex-row" : "flex-row-reverse md:flex-row-reverse"}`}
     >
-      <div className="flex w-full justify-center px-4 sm:px-10 md:w-1/2 md:px-14">
-        <img
-          src={imageSrc}
-          alt={title}
-          className="min-h-[200px] w-full max-w-xs object-contain sm:max-w-md md:max-w-full"
-        />
+      <div className="flex w-full justify-center px-14 md:w-1/2">
+        <img src={imageSrc} alt={title} className="w-full object-cover" />
       </div>
-      <div className="w-full px-3 text-left sm:px-6 md:w-1/2 md:px-14">
-        <div className="text-wushu-red-100 font-arimo text-[10px] font-bold italic sm:text-lg">
+      <div className="w-full px-14 text-left md:w-1/2 md:text-left">
+        <div className="text-wushu-red-100 font-arimo text-lg font-bold italic">
           {title}
         </div>
-        <div className="text-wushu-red-100 font-arimo text-[8px] italic sm:text-sm">
+        <div className="text-md text-wushu-red-100 font-arimo italic">
           {date}
         </div>
-        <div className="text-wushu-red-100 font-arimo mt-4 text-[9px] sm:mt-5 sm:text-base">
+        <div className="text-wushu-red-100 font-arimo mt-5 text-base">
           {description}
         </div>
       </div>
