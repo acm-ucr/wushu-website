@@ -4,28 +4,34 @@ import Image from "next/image";
 import GroupPhoto from "@/public/images/contact_us/want_to_book_us.webp";
 import WushuLogo from "@/public/logos/wushufront.svg";
 
-const email = `mailto:example@email.com?subject=${encodeURIComponent("Wushu Booking Request")}&body=${encodeURIComponent(`Hi Wushu Team,
+const email = `mailto:wushu.ucriverside@gmail.com?subject=${encodeURIComponent("Wushu Performance Request")}&body=${encodeURIComponent(`Hi Wushu club,
 
-  I would like to book you for an event. Here are the details:
-  - Time:
-  - Location:
-  - Other info:
-  
-  Thanks!`)}`;
+We would like you to perform at our event! Here are some details:
+Organization: 
+Event: 
+Date & time: 
+Location: 
+Other details: 
+
+Thank you!`)}`;
 
 const WantToBookUs = () => {
   return (
     <div>
-      <div className="pb-8 text-8xl">WANT TO BOOK US?</div>
+      <div className="text-8xl">WANT TO BOOK US?</div>
       <div className="flex">
         <div>
-          <div className="font-arimo text-wushu-red-100 mr-8 w-2xl pt-8 text-4xl">
-            Please email us at example@email.com and provide us with a time,
-            location, and any other details!
+          <div className="font-arimo text-wushu-red-100 mr-8 w-2xl pt-10 text-2xl">
+            We love to perform for school events as well as off-campus
+            organizations! We’ve performed for APSP, ASPB, CSA, NSU, and more on
+            campus, as well as for the Rancho Cucamonga Lunar New Year Festival
+            off-campus. Please email us with a time, location, and any other
+            logistical details about the event! We perform for free and our
+            performances are usually within 10 minutes of runtime.
           </div>
-          <div className="flex h-96 w-xl items-center justify-center">
+          <div className="flex h-80 w-xl items-center justify-center">
             <Link
-              className="border-wushu-gold-100 flex h-52 w-96 items-center justify-center rounded-2xl border-6 bg-white"
+              className="border-wushu-gold-100 flex h-45 w-80 items-center justify-center rounded-2xl border-6 bg-white"
               href={email}
             >
               <Image
@@ -33,7 +39,7 @@ const WantToBookUs = () => {
                 alt="Wushu Logo"
                 className="h-40 object-contain"
               />
-              <div className="text-wushu-red-100 font-amaranth flex w-76 text-left text-5xl font-bold">
+              <div className="text-wushu-red-100 font-amaranth flex w-76 text-left text-4xl font-bold">
                 Email Us!
               </div>
             </Link>
