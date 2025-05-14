@@ -15,10 +15,10 @@ function Calendar({
 }: React.ComponentProps<typeof DayPicker>) {
   return (
     <DayPicker
-
-    formatters={{
-      formatWeekdayName: (day) => day.toLocaleDateString("en-US", { weekday: "short" }),
-    }}
+      formatters={{
+        formatWeekdayName: (day) =>
+          day.toLocaleDateString("en-US", { weekday: "short" }),
+      }}
       showOutsideDays={showOutsideDays}
       className={cn("p-3", className)}
       classNames={{
@@ -48,7 +48,7 @@ function Calendar({
         day: cn(
           buttonVariants({ variant: "ghost" }),
           " size-10 md:size-20 lg:size-34 md:text-lg lg:text-2xl p-0.5 md:pr-1 lg:p-2 font-normal aria-selected:opacity-100",
-          "flex items-start justify-end"
+          "flex items-start justify-end",
         ),
         day_range_start:
           "day-range-start aria-selected:bg-primary aria-selected:text-primary-foreground",
@@ -66,9 +66,6 @@ function Calendar({
         ...classNames,
       }}
       components={{
-
-        
-
         IconLeft: ({ className, ...props }) => (
           <ChevronLeft className={cn("lg:size-10", className)} {...props} />
         ),
