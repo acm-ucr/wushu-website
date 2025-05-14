@@ -15,6 +15,10 @@ function Calendar({
 }: React.ComponentProps<typeof DayPicker>) {
   return (
     <DayPicker
+
+    formatters={{
+      formatWeekdayName: (day) => day.toLocaleDateString("en-US", { weekday: "short" }),
+    }}
       showOutsideDays={showOutsideDays}
       className={cn("p-3", className)}
       classNames={{
@@ -22,7 +26,7 @@ function Calendar({
         month: "flex flex-col gap-4",
         caption: "flex justify-center pt-1 relative items-center w-full",
         caption_label:
-          " text-lg md:text-3xl lg:text-5xl font-semibold font-arimo text-wushu-red-100",
+          " text-lg md:text-4xl lg:text-6xl font-semibold font-khula text-wushu-red-100",
         nav: "flex items-center gap-1",
         nav_button: cn(
           buttonVariants({ variant: "outline" }),
@@ -30,10 +34,10 @@ function Calendar({
         ),
         nav_button_previous: "absolute left-1",
         nav_button_next: "absolute right-1",
-        table: "w-full border-collapse space-x-1",
-        head_row: "grid-cols-7", //Removed flex
+        table: "w-full border-collapse",
+        head_row: "grid-cols-7 w-full", //Removed flex
         head_cell:
-          "text-muted-foreground rounded-md w-8 font-normal font-arimo lg:text-2xl",
+          " bg-wushu-red-100 border border-wushu-red-100 text-muted-foreground font-normal text-white font-khula text-sm md:text-lg lg:text-2xl pt-1.5",
         row: "grid-cols-7 w-full mt-2",
         cell: cn(
           " border-2 border-solid border-wushu-red-100 relative p-0 text-center text-sm focus-within:relative focus-within:z-20 [&:has([aria-selected])]:bg-accent [&:has([aria-selected].day-range-end)]:rounded-r-md",
@@ -43,7 +47,8 @@ function Calendar({
         ),
         day: cn(
           buttonVariants({ variant: "ghost" }),
-          " size-10 md:size-16 lg:size-25 lg:text-2xl p-0 font-normal aria-selected:opacity-100",
+          " size-10 md:size-20 lg:size-34 md:text-lg lg:text-2xl p-0.5 md:pr-1 lg:p-2 font-normal aria-selected:opacity-100",
+          "flex items-start justify-end"
         ),
         day_range_start:
           "day-range-start aria-selected:bg-primary aria-selected:text-primary-foreground",
@@ -61,11 +66,14 @@ function Calendar({
         ...classNames,
       }}
       components={{
+
+        
+
         IconLeft: ({ className, ...props }) => (
-          <ChevronLeft className={cn("lg:size-8", className)} {...props} />
+          <ChevronLeft className={cn("lg:size-10", className)} {...props} />
         ),
         IconRight: ({ className, ...props }) => (
-          <ChevronRight className={cn("lg:size-8", className)} {...props} />
+          <ChevronRight className={cn("lg:size-10", className)} {...props} />
         ),
       }}
       {...props}

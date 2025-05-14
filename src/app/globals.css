@@ -5,7 +5,9 @@
 
 @font-face {
   font-family: "Maragsa Display";
-  src: url("/public/fonts/margasa/Maragsâ-Display.otf") format("opentype");
+  src:
+    url("/fonts/margasa/Maragsa-Display.woff") format("woff"),
+    url("/fonts/margasa/Maragsa-Display.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

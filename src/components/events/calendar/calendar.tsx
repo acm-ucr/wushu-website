@@ -1,12 +1,15 @@
-//import YES from "../../../../public/logos/wushufront.svg"
-//import Image from "next/image";
+import Border from "../../../../public/logos/border.svg"
+import Image from "next/image";
 import React from "react";
 import { Calendar } from "../../ui/calendar";
 
 const WushuCalendar = () => {
   return (
-    <div className="bg-wushu-cream-100 flex w-full flex-col items-center justify-center pt-36 pb-24">
-      {/* <Image src={YES} alt="Front"/> */}
+    <div className="bg-wushu-cream-100 flex w-full flex-col items-center justify-center lg:pt-64 lg:pb-52">
+      <div className ="flex w-full justify-between px-12 mt-24 -mb-12">
+        <Image src={Border} alt="Border left" className="w-30 rotate-270 hidden lg:block" />
+        <Image src={Border} alt="Border right"className="w-30 hidden lg:block" />
+        </div>
       <Calendar className="h-screen" />
     </div>
   );
