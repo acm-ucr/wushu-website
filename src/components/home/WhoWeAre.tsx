@@ -1,15 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import Header from "../Header";
 
 const WhoWeAre = () => {
   return (
     <div className="flex w-full flex-col content-start gap-1 p-10 md:flex-row lg:flex-row">
       <div className="flex w-2/3 flex-col items-center">
         <div>
-          <div className="text-wushu-gold-200 font-margasa mb-6 text-2xl font-extrabold md:text-3xl lg:text-5xl">
-            WHO WE ARE
-          </div>
-          <div className="bg-wushu-red-200">
+          <Header title="WHO WE ARE" isRed={true} />
+          <div className="bg-wushu-red-200 mt-9">
             <Image
               src="/images/who_we_are/who_we_are_img.webp"
               alt="Who We Are"

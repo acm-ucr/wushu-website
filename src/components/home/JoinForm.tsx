@@ -1,16 +1,10 @@
 import React from "react";
+import Header from "../Header";
 
 const JoinForm = () => {
   return (
     <div className="justify-left w-full flex-col px-25">
-      <div className="relative mt-6 mb-3">
-        <div className="text-wushu-red-100 font-margasa absolute top-1 -left-1 text-5xl font-bold">
-          HOW TO JOIN
-        </div>
-        <div className="text-wushu-gold-100 font-margasa relative text-5xl font-extrabold">
-          HOW TO JOIN
-        </div>
-      </div>
+      <Header title="HOW TO JOIN" isRed={true} />
       <h1 className="text-wushu-red-100 mt-6 mb-5 max-w-md text-left text-2xl">
         We are open to people of all experience levels, whether you have no
         experience or years of experience! To join, feel free to just show up to
