@@ -17,7 +17,7 @@ const Performance = ({
 }: PerformanceProps) => {
   return (
     <div
-      className={`mt-2 flex items-center gap-3 sm:mt-10 sm:gap-3 md:flex-row md:gap-0 ${imageOnLeft ? "flex md:flex-row" : "flex-row-reverse md:flex-row-reverse"}`}
+      className={`mt-11 flex items-center md:flex-row ${imageOnLeft ? "flex md:flex-row" : "flex-row-reverse md:flex-row-reverse"}`}
     >
       <div className="flex w-full justify-center px-4 sm:px-10 md:w-1/2 md:px-14">
         <img
