@@ -1,15 +1,11 @@
-import Example from "@/components/Example";
-import MeetTheBoard from "@/components/board/BoardMemberCard";
+import MeetTheBoard from "@/components/board/MeetTheBoard";
 
 const Home = () => {
   return (
-    <div className="font-arimo flex h-screen w-screen items-center justify-center">
-      <Example text1="Adjust" text2="these" text3="Props" />
+    <div className="">
+      <MeetTheBoard />
     </div>
   );
 };
 
 export default Home;
-export default function Home() {
-  return <MeetTheBoard />;
-}
