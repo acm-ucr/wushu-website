@@ -5,7 +5,7 @@ import {snapshots} from "@/data/snapshots";
 const Home = () => {
   return (
     <div className="font-arimo flex h-screen w-screen items-center justify-center">
-      <WhoWeAre />
+      {/* <WhoWeAre /> */}
       <Snapshots photos={snapshots}/>
     </div>
   );
