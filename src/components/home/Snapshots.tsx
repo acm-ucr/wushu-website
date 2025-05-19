@@ -25,7 +25,7 @@ interface SnapshotsProps {
 const Snapshots = ({ photos = snapshots }: SnapshotsProps) => {
   return (
     <div className="relative m-20">
-      <Header title={"SNAPSHOTS"}></Header>
+      <Header title={"SNAPSHOTS"} isRed={true}></Header>
       {/* <div className="flex items-center">
                 <div><Image src={leftArrow} alt={"left arrow"} width={100} onClick={scrollNext}></Image></div>
                 <div className="flex">
