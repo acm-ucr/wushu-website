@@ -1,12 +1,12 @@
 import { StaticImageData } from "next/image";
-import photo1 from "@/public/images/snapshots/snapshots1.jpg";
-import photo2 from "@/public/images/snapshots/snapshots2.jpg";
-import photo3 from "@/public/images/snapshots/snapshots3.jpg";
-import photo4 from "@/public/images/snapshots/snapshots4.jpg";
-import photo5 from "@/public/images/snapshots/snapshots5.jpg";
-import photo6 from "@/public/images/snapshots/snapshots6.jpg";
-import photo7 from "@/public/images/snapshots/snapshots7.jpg";
-import photo8 from "@/public/images/snapshots/snapshots8.jpg";
+import photo1 from "@/public/images/snapshots/snapshots1.webp";
+import photo2 from "@/public/images/snapshots/snapshots2.webp";
+import photo3 from "@/public/images/snapshots/snapshots3.webp";
+import photo4 from "@/public/images/snapshots/snapshots4.webp";
+import photo5 from "@/public/images/snapshots/snapshots5.webp";
+import photo6 from "@/public/images/snapshots/snapshots6.webp";
+import photo7 from "@/public/images/snapshots/snapshots7.webp";
+import photo8 from "@/public/images/snapshots/snapshots8.webp";
 
 interface Photo {
   src: StaticImageData;
