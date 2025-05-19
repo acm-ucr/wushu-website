@@ -1,15 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import Header from "../Header";
 
 const WhoWeAre = () => {
   return (
-    <div className="flex w-full content-start gap-1 p-10">
+    <div className="flex w-full flex-col content-start gap-1 p-10 md:flex-row lg:flex-row">
       <div className="flex w-2/3 flex-col items-center">
         <div>
-          <div className="text-wushu-gold-200 font-margasa mb-6 text-5xl font-extrabold">
-            WHO WE ARE
-          </div>
-          <div className="bg-wushu-red-200">
+          <Header title="WHO WE ARE" isRed={true} />
+          <div className="bg-wushu-red-200 mt-9">
             <Image
               src="/images/who_we_are/who_we_are_img.webp"
               alt="Who We Are"
@@ -20,18 +19,17 @@ const WhoWeAre = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-1/2 flex-col">
-        <h2 className="text-wushu-gold-100 font-arimo pt-25 pb-1 text-4xl font-bold">
+      <div className="flex w-full flex-col md:w-2/3 md:pr-6 md:pl-10 lg:w-2/3 lg:pr-6 lg:pl-10">
+        <h2 className="text-wushu-gold-100 font-arimo pb-1 text-lg font-bold md:pt-8 md:text-xl lg:pt-16 lg:text-4xl">
           WHAT IS WUSHU?
         </h2>
-        <h3 className="text-wushu-red-100 font-arimo text-3xl tracking-tighter">
-          Wushu, also known as kung fu, is a competitive Chinese martial art. It
-          integrates concepts and forms from various traditional and modern
-          Chinese martial arts, including Shaolin kung fu, tai chi, and
-          Wudangquan. "Wushu" is the Chinese term for "martial arts" (武 "Wu"=
-          combat or martial, 術 "Shu" = art), it reflects the art's goal as a
-          compilation and standardization of various styles. To distinguish it
-          from traditional Chinese martial arts, it's called "Modern Wushu."
+        <h3 className="text-wushu-red-100 font-arimo text-md tracking-tighter md:text-xl lg:text-3xl">
+          Here at Wushu At UCR, we aim to provide a fun environment where
+          members can learn, practice, and prepare to compete in wushu. Wushu is
+          a Chinese martial art that encompasses many aspects, but we
+          specifically do just forms and not sparring or combat. We also do
+          performances for various events around campus if you’d like to see us
+          in action!
         </h3>
       </div>
     </div>
