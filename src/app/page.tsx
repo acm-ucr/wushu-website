@@ -1,12 +1,13 @@
 import WhoWeAre from "@/components/home/WhoWeAre";
-import Snapshots from "@/components/home/Snapshots";
-import { snapshots } from "@/data/snapshots";
+import LocationAndTime from "@/components/home/LocationAndTime";
+import JoinForm from "@/components/home/JoinForm";
 
 const Home = () => {
   return (
-    <div className="font-arimo flex h-screen w-screen items-center justify-center">
+    <div className="">
       <WhoWeAre />
-      <Snapshots photos={snapshots} />
+      <LocationAndTime />
+      <JoinForm />
     </div>
   );
 };
