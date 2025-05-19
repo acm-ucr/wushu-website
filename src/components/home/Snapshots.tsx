@@ -1,8 +1,7 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
 import Header from "@/components/Header";
-import leftArrow from "@/public/logos/left-arrow.svg";
-import rightArrow from "@/public/logos/right-arrow.svg";
+import { snapshots } from "@/data/snapshots";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -20,15 +19,13 @@ interface Photo {
 
 interface SnapshotsProps {
   //array of photos
-  photos: Photo[];
+  photos?: Photo[];
 }
 
-const Snapshots = ({ photos }: SnapshotsProps) => {
-  //const [currIndex, setCurrentIndex] = useState(0);
-
+const Snapshots = ({ photos = snapshots }: SnapshotsProps) => {
   return (
-    <div className="relative">
-      <Header title={"Snapshots"}></Header>
+    <div className="relative m-20">
+      <Header title={"SNAPSHOTS"}></Header>
       {/* <div className="flex items-center">
                 <div><Image src={leftArrow} alt={"left arrow"} width={100} onClick={scrollNext}></Image></div>
                 <div className="flex">
@@ -48,7 +45,7 @@ const Snapshots = ({ photos }: SnapshotsProps) => {
             depth: 50,
             modifier: 7,
           }}
-          pagination={{ el: ".swiper-pagination", clickable: true }}
+          pagination={{ el: ".swiper-pagination" }}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -73,21 +70,9 @@ const Snapshots = ({ photos }: SnapshotsProps) => {
               <Image src={item.src} alt={item.alt} key={index} />
             </SwiperSlide>
           ))}
-          {/* <SwiperSlide className="bg-center bg-cover block"><Image src={leftArrow} alt={"left arrow"} width={100}/></SwiperSlide>
-                    <SwiperSlide ><Image src={leftArrow} alt={"left arrow"} width={100}/></SwiperSlide>
-                    <SwiperSlide ><Image src={leftArrow} alt={"left arrow"} width={100}/></SwiperSlide>
-                    <SwiperSlide ><Image src={leftArrow} alt={"left arrow"} width={100}/></SwiperSlide>
-                    <SwiperSlide ><Image src={leftArrow} alt={"left arrow"} width={100}/></SwiperSlide>
-                    <SwiperSlide ><Image src={leftArrow} alt={"left arrow"} width={100}/></SwiperSlide>
-                    <SwiperSlide ><Image src={leftArrow} alt={"left arrow"} width={100}/></SwiperSlide>
- */}
 
-          <div className="swiper-button-prev">
-            <Image src={leftArrow} alt={"left arrow"} width={100}></Image>
-          </div>
-          <div className="swiper-button-next">
-            <Image src={rightArrow} alt={"right arrow"} width={100}></Image>
-          </div>
+          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
           <div className="swiper-pagination"></div>
         </Swiper>
       </div>
