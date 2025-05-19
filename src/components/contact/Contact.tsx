@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import Header from "../Header";
 
-const ContactUs = () => {
+const Contact = () => {
   return (
     <div className="bg-wushu-cream flex flex-col items-center justify-center gap-10 px-4 py-10 md:flex-row md:px-20">
       <div className="w-full md:w-1/2">
@@ -19,10 +20,8 @@ const ContactUs = () => {
       </div>
 
       <div className="text-wushu-gold-100 w-full md:w-1/2">
-        <h2 className="text-wushu-red-200 mb-4 text-2xl font-bold md:text-4xl">
-          CONTACT <span className="text-wushu-gold-200">US</span>
-        </h2>
-        <div className="space-y-3 text-base md:text-lg">
+        <Header title="CONTACT US" isRed={false} />
+        <div className="mt-5 space-y-3 text-base md:text-lg">
           <p>
             <span className="text-wushu-red-100 font-semibold">Instagram:</span>{" "}
             @wushuatucr
@@ -55,4 +54,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Contact;
