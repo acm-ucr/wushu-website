@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 import Header from "@/components/Header";
 import leftArrow from "@/public/logos/left-arrow.svg";
