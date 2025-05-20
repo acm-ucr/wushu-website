@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import GroupPhoto from "@/public/images/contact_us/want_to_book_us.webp";
 import WushuLogo from "@/public/logos/wushufront.svg";
+import Header from "../Header";
 
 const email = `mailto:wushu.ucriverside@gmail.com?subject=${encodeURIComponent("Wushu Performance Request")}&body=${encodeURIComponent(`Hi Wushu club,
 
@@ -17,8 +18,8 @@ Thank you!`)}`;
 
 const WantToBookUs = () => {
   return (
-    <div>
-      <div className="text-8xl">WANT TO BOOK US?</div>
+    <div className="m-7">
+      <Header title="WANT TO BOOK US?" isRed={true} />
       <div className="flex">
         <div>
           <div className="font-arimo text-wushu-red-100 mr-8 w-2xl pt-10 text-2xl">

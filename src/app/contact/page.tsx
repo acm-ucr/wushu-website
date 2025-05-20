@@ -1,8 +1,10 @@
 import WantToBookUs from "@/components/contact/WantToBookUs";
+import Contact from "@/components/contact/Contact";
 
 const ContactUs = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
+    <div className="">
+      <Contact />
       <WantToBookUs />
     </div>
   );
