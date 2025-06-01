@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import BoardMemberCard from "./BoardMemberCard";
 import { BoardMembers } from "../../data/BoardMembers";
 import { motion } from "framer-motion";
@@ -37,4 +37,3 @@ const BoardMemberMap = () => {
 };
 
 export default BoardMemberMap;
-
