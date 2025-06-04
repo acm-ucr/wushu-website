@@ -28,21 +28,17 @@ const Navbar = () => {
         />
       </Link>
 
-      <div className="mx-12 my-6 md:hidden" onClick={handleMobileMenu}>
-        <FaBars className="text-wushu-red-100 text-3xl" />
-      </div>
+        <FaBars className="text-wushu-red-100 text-3xl mx-12 my-6 md:hidden" onClick={handleMobileMenu} />
 
-      <div className="text-wushu-red-100 font-khula text-l hidden w-full justify-end gap-8 pr-20 tracking-tight whitespace-nowrap md:flex lg:text-2xl xl:text-3xl">
         {tags.map(({ name, link }, index) => (
           <Link
             href={link}
             key={index}
-            className={`${pathName === link ? "font-bold" : ""}`}
+            className={`text-wushu-red-100 font-khula hidden tracking-tight pr-8 md:flex whitespace-nowrap text-2xl lg:text-3xl xl:text-xl ${pathName === link ? "font-bold" : ""}`}
           >
             {name}
           </Link>
         ))}
-      </div>
 
       <div
         className={`border-wushu-red-100 font-arimo text-wushu-red-100 bg-wushu-cream-100 absolute top-full right-0 flex w-1/2 flex-col border-2 md:hidden ${showMobileMenu ? animation : "hidden"}`}

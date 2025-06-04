@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Header from "../Header";
+import Header from "@/components/Header";
 
 const WhoWeAre = () => {
   return (
