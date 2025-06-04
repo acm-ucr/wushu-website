@@ -1,9 +1,13 @@
-import MeetTheBoard from "@/components/board/MeetTheBoard";
+import WhoWeAre from "@/components/home/WhoWeAre";
+import LocationAndTime from "@/components/home/LocationAndTime";
+import JoinForm from "@/components/home/JoinForm";
 
 const Home = () => {
   return (
     <div className="">
-      <MeetTheBoard />
+      <WhoWeAre />
+      <LocationAndTime />
+      <JoinForm />
     </div>
   );
 };
