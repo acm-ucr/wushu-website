@@ -18,7 +18,6 @@ interface Photo {
 }
 
 interface SnapshotsProps {
-  //array of photos
   photos?: Photo[];
 }
 
@@ -26,15 +25,6 @@ const Snapshots = ({ photos = snapshots }: SnapshotsProps) => {
   return (
     <div className="relative m-20">
       <Header title={"SNAPSHOTS"} isRed={true}></Header>
-      {/* <div className="flex items-center">
-                <div><Image src={leftArrow} alt={"left arrow"} width={100} onClick={scrollNext}></Image></div>
-                <div className="flex">
-                    {photos.map((item, index) => (
-                        <Image src={item.src} alt={item.alt} key={index}/>
-                    ))}
-                </div>
-                <div><Image src={rightArrow} alt={"right arrow"} width={100}></Image></div>  
-            </div> */}
       <div className="flex items-center justify-center gap-7">
         <Swiper
           effect={"coverflow"}
@@ -66,9 +56,13 @@ const Snapshots = ({ photos = snapshots }: SnapshotsProps) => {
           }}
         >
           {photos.map((item, index) => (
-            <SwiperSlide className="">
-              <Image src={item.src} alt={item.alt} key={index} />
+            
+            <SwiperSlide>
+              <div className="flex justify-center items-center">
+                <Image src={item.src} alt={item.alt} key={index} width={500} height={500}/>
+              </div>
             </SwiperSlide>
+            
           ))}
 
           <div className="swiper-button-prev"></div>
