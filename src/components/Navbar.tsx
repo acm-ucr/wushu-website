@@ -28,17 +28,20 @@ const Navbar = () => {
         />
       </Link>
 
-        <FaBars className="text-wushu-red-100 text-3xl mx-12 my-6 md:hidden" onClick={handleMobileMenu} />
+      <FaBars
+        className="text-wushu-red-100 mx-12 my-6 text-3xl md:hidden"
+        onClick={handleMobileMenu}
+      />
 
-        {tags.map(({ name, link }, index) => (
-          <Link
-            href={link}
-            key={index}
-            className={`text-wushu-red-100 font-khula hidden tracking-tight pr-8 md:flex whitespace-nowrap text-2xl lg:text-3xl xl:text-xl ${pathName === link ? "font-bold" : ""}`}
-          >
-            {name}
-          </Link>
-        ))}
+      {tags.map(({ name, link }, index) => (
+        <Link
+          href={link}
+          key={index}
+          className={`text-wushu-red-100 font-khula hidden pr-8 text-2xl tracking-tight whitespace-nowrap md:flex lg:text-3xl xl:text-xl ${pathName === link ? "font-bold" : ""}`}
+        >
+          {name}
+        </Link>
+      ))}
 
       <div
         className={`border-wushu-red-100 font-arimo text-wushu-red-100 bg-wushu-cream-100 absolute top-full right-0 flex w-1/2 flex-col border-2 md:hidden ${showMobileMenu ? animation : "hidden"}`}

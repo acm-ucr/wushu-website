@@ -19,8 +19,8 @@ const WhoWeAre = () => {
           </div>
         </div>
       </div>
-      <div className="flex w-full items-center md:items-start flex-col md:w-2/3 pt-4 md:pt-20 md:pr-6 md:pl-10 lg:pr-6 lg:pl-10">
-        <h2 className=" text-wushu-gold-100 font-arimo pb-1 text-xl font-bold md:pt-8 md:text-2xl lg:pt-16 lg:text-4xl">
+      <div className="flex w-full flex-col items-center pt-4 md:w-2/3 md:items-start md:pt-20 md:pr-6 md:pl-10 lg:pr-6 lg:pl-10">
+        <h2 className="text-wushu-gold-100 font-arimo pb-1 text-xl font-bold md:pt-8 md:text-2xl lg:pt-16 lg:text-4xl">
           WHAT IS WUSHU?
         </h2>
         <h3 className="text-wushu-red-100 font-arimo text-lg tracking-tighter md:text-xl lg:text-3xl">
