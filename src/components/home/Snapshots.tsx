@@ -56,13 +56,17 @@ const Snapshots = ({ photos = snapshots }: SnapshotsProps) => {
           }}
         >
           {photos.map((item, index) => (
-            
             <SwiperSlide>
-              <div className="flex justify-center items-center">
-                <Image src={item.src} alt={item.alt} key={index} width={500} height={500}/>
+              <div className="flex items-center justify-center">
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  key={index}
+                  width={500}
+                  height={500}
+                />
               </div>
             </SwiperSlide>
-            
           ))}
 
           <div className="swiper-button-prev"></div>

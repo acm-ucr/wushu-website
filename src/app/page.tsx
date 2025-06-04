@@ -9,7 +9,7 @@ const Home = () => {
       <WhoWeAre />
       <LocationAndTime />
       <JoinForm />
-      <Snapshots/>
+      <Snapshots />
     </div>
   );
 };
