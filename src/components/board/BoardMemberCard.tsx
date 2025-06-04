@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image, { StaticImageData } from "next/image";
+import { motion } from "framer-motion";
 
 interface BoardMemberCardProps {
   photo: StaticImageData;
@@ -10,6 +12,18 @@ interface BoardMemberCardProps {
   pronouns: string;
 }
 
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      scale: { type: "spring", duration: 0.4, bounce: 0.3 },
+    },
+  },
+};
+
 const BoardMemberCard: React.FC<BoardMemberCardProps> = ({
   photo,
   position,
@@ -19,7 +33,10 @@ const BoardMemberCard: React.FC<BoardMemberCardProps> = ({
   pronouns,
 }) => {
   return (
-    <div className="font-arimo justify-items-center -tracking-[0.1em] whitespace-nowrap">
+    <motion.div
+      variants={cardVariants}
+      className="font-arimo justify-items-center -tracking-[0.1em] whitespace-nowrap"
+    >
       <Image src={photo} alt={`Photo of ${name}`} />
       <div className="text-wushu-red-100 text-4xl leading-20 font-bold italic md:text-2xl md:leading-12 lg:text-3xl lg:leading-15 xl:text-4xl xl:leading-20">
         {position}
@@ -32,7 +49,7 @@ const BoardMemberCard: React.FC<BoardMemberCardProps> = ({
         <div>{major}</div>
         <div>{pronouns}</div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

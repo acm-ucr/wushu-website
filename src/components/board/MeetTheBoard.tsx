@@ -43,7 +43,7 @@ const MeetTheBoard = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
-          className="text-wushu-gold-100 text-5xl leading-tight font-bold md:text-6xl lg:text-7xl"
+          className="text-wushu-gold-100 text-5xl leading-tight font-bold sm:text-5xl md:text-6xl lg:text-7xl"
         >
           MEET THE
         </motion.div>
@@ -53,7 +53,7 @@ const MeetTheBoard = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
-          className="text-wushu-gold-100 text-5xl leading-tight font-bold md:text-6xl lg:text-7xl"
+          className="text-wushu-gold-100 text-5xl leading-tight font-bold sm:text-5xl md:text-6xl lg:text-7xl"
         >
           2024–2025
         </motion.div>
@@ -63,12 +63,12 @@ const MeetTheBoard = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
-          className="text-wushu-gold-100 text-5xl leading-tight font-bold md:text-6xl lg:text-7xl"
+          className="text-wushu-gold-100 text-5xl leading-tight font-bold sm:text-5xl md:text-6xl lg:text-7xl"
         >
           BOARD
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
