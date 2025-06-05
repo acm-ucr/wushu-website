@@ -3,17 +3,35 @@
 import * as React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { DayPicker } from "react-day-picker";
-
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 
-function Calendar({
+const calendarAnimated = {
+  hidden: {opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: 0.3,
+      duration: 1.2,
+        scale: {type: "spring", duration: 0.8, bounce: 0.4 },
+      },
+    },
+  };
+
+function CalendarUI({
   className,
   classNames,
   showOutsideDays = true,
   ...props
 }: React.ComponentProps<typeof DayPicker>) {
   return (
+    <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={calendarAnimated}
+  >
     <DayPicker
       formatters={{
         formatWeekdayName: (day) =>
@@ -75,7 +93,8 @@ function Calendar({
       }}
       {...props}
     />
+    </motion.div>
   );
 }
 
-export { Calendar };
+export { CalendarUI };
