@@ -145,12 +145,12 @@
   body {
     @apply bg-background text-foreground;
   }
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  color: #c30000;
-}
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    color: #c30000;
+  }
 
-.swiper-pagination-bullets {
-  display: none;
-}
+  .swiper-pagination-bullets {
+    display: none;
+  }
 }

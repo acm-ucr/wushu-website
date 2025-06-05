@@ -6,7 +6,7 @@ import { CalendarUI } from "../../ui/calendar";
 const WushuCalendar = () => {
   return (
     <div className="bg-wushu-cream-100 flex w-full flex-col items-center justify-center lg:pb-52">
-      <div className="mt-12 lg:mt-6 lg:-mb-12 flex w-full justify-between px-12">
+      <div className="mt-12 flex w-full justify-between px-12 lg:mt-6 lg:-mb-12">
         <Image
           src={Border}
           alt="Border left"
@@ -20,7 +20,6 @@ const WushuCalendar = () => {
       </div>
       <CalendarUI className="h-screen" />
     </div>
-    
   );
 };
 
