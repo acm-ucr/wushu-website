@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 interface PerformanceProps {
   imageSrc: string;
@@ -8,6 +10,11 @@ interface PerformanceProps {
   imageOnLeft: boolean;
 }
 
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const Performance = ({
   imageSrc,
   title,
@@ -15,11 +22,23 @@ const Performance = ({
   description,
   imageOnLeft = false,
 }: PerformanceProps) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <div
-      className={`mt-11 flex items-center md:flex-row ${imageOnLeft ? "flex md:flex-row" : "flex-row-reverse md:flex-row-reverse"}`}
+    <motion.div
+      ref={ref}
+      variants={fadeIn}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={`mt-15 flex items-center sm:mt-20 md:mt-30 md:flex-row ${
+        imageOnLeft
+          ? "flex md:flex-row"
+          : "flex-row-reverse md:flex-row-reverse"
+      }`}
     >
-      <div className="flex w-full justify-center px-4 sm:px-10 md:w-1/2 md:px-14">
+      <div className="flex w-full justify-center px-6 sm:px-10 md:w-1/2 md:px-14">
         <img
           src={imageSrc}
           alt={title}
@@ -37,7 +56,7 @@ const Performance = ({
           {description}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

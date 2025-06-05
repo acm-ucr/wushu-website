@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import GroupPhoto from "@/public/images/contact_us/want_to_book_us.webp";
 import WushuLogo from "@/public/logos/wushufront.svg";
-import Header from "../Header";
+import Header from "@/components/Header";
 
 const email = `mailto:wushu.ucriverside@gmail.com?subject=${encodeURIComponent("Wushu Performance Request")}&body=${encodeURIComponent(`Hi Wushu club,
 
@@ -20,9 +20,9 @@ const WantToBookUs = () => {
   return (
     <div className="m-7">
       <Header title="WANT TO BOOK US?" isRed={true} />
-      <div className="flex">
+      <div className="flex flex-col pb-44 lg:flex-row">
         <div>
-          <div className="font-arimo text-wushu-red-100 mr-8 w-2xl pt-10 text-2xl">
+          <div className="font-arimo text-wushu-red-100 w-xs pt-10 text-sm md:mr-8 md:w-2xl md:text-2xl">
             We love to perform for school events as well as off-campus
             organizations! We’ve performed for APSP, ASPB, CSA, NSU, and more on
             campus, as well as for the Rancho Cucamonga Lunar New Year Festival
@@ -30,7 +30,7 @@ const WantToBookUs = () => {
             logistical details about the event! We perform for free and our
             performances are usually within 10 minutes of runtime.
           </div>
-          <div className="flex h-80 w-xl items-center justify-center">
+          <div className="flex h-80 w-xl items-center md:justify-center">
             <Link
               className="border-wushu-gold-100 flex h-45 w-80 items-center justify-center rounded-2xl border-6 bg-white"
               href={email}
