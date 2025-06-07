@@ -39,7 +39,7 @@ interface DayProps {
   setCurrent: (props: EventProps) => void;
 }
 
-const Day = ({date, displayMonth, events, setCurrent }: DayProps) => {
+const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
   const currentMonth = displayMonth.getMonth() === date.getMonth();
   const isToday =
     date.getDate() === new Date().getDate() &&
@@ -48,13 +48,16 @@ const Day = ({date, displayMonth, events, setCurrent }: DayProps) => {
 
   return (
     <button
-    className={cn("relative size-12 md:size-20 lg:size-34 p-1 flex flex-col items-end justify-start",
+      className={cn(
+        "relative flex size-12 flex-col items-end justify-start p-1 md:size-20 lg:size-34",
         currentMonth ? "text-black" : "text-gray-400",
         isToday ? "bg-accent text-accent-foreground" : "hover:bg-white",
-        "overflow-hidden border-0.5  border-wushu-red-100  hover:bg-white"
-    )}
+        "border-0.5 border-wushu-red-100 overflow-hidden hover:bg-white",
+      )}
     >
-      <p className=" md:text-lg lg:text-2xl md:pr-1 lg:p-0.5 font-normal aria-selected:opacity-100 text-right">{date.getDate()}</p>
+      <p className="text-right font-normal aria-selected:opacity-100 md:pr-1 md:text-lg lg:p-0.5 lg:text-2xl">
+        {date.getDate()}
+      </p>
 
       {events?.map(({ title, start, end, location, description }, index) => {
         const startDate = new Date(start as string);
@@ -66,7 +69,7 @@ const Day = ({date, displayMonth, events, setCurrent }: DayProps) => {
         ) {
           return (
             <div
-              className="my-1 cursor-pointer text-ellipsis bg-fencing-border-blue bg-opacity-75 p-1 text-center text-black hover:bg-opacity-100"
+              className="bg-fencing-border-blue bg-opacity-75 hover:bg-opacity-100 my-1 cursor-pointer p-1 text-center text-ellipsis text-black"
               key={index}
               onClick={() =>
                 setCurrent({ title, start, end, location, description })
@@ -83,7 +86,6 @@ const Day = ({date, displayMonth, events, setCurrent }: DayProps) => {
     </button>
   );
 };
-      
 
 const calendarAnimated = {
   hidden: { opacity: 0, scale: 0 },
@@ -105,7 +107,7 @@ function CalendarUI({
   events,
   setCurrent,
   ...props
-}:  CalendarProps) {
+}: CalendarProps) {
   return (
     <motion.div initial="hidden" animate="visible" variants={calendarAnimated}>
       <DayPicker
@@ -167,13 +169,13 @@ function CalendarUI({
             <ChevronRight className={cn("lg:size-10", className)} {...props} />
           ),
           Day: ({ displayMonth, date }) => (
-          <Day
-            date={date}
-            displayMonth={displayMonth}
-            events={events}
-            setCurrent={setCurrent}
-          />
-        ),
+            <Day
+              date={date}
+              displayMonth={displayMonth}
+              events={events}
+              setCurrent={setCurrent}
+            />
+          ),
         }}
         {...props}
       />
