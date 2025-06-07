@@ -7,6 +7,84 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 
+export type GoogleEventProps = {
+  start: {
+    dateTime: Date;
+  };
+  end: {
+    dateTime: Date;
+  };
+  location: string;
+  description: string;
+  summary: string;
+};
+
+export type EventProps = Partial<{
+  start: string;
+  end: string;
+  location: string;
+  description: string;
+  title: string;
+}>;
+
+export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
+  events: EventProps[];
+  setCurrent: (props: EventProps) => void;
+};
+
+interface DayProps {
+  date: Date;
+  displayMonth: Date;
+  events: EventProps[];
+  setCurrent: (props: EventProps) => void;
+}
+
+const Day = ({date, displayMonth, events, setCurrent }: DayProps) => {
+  const currentMonth = displayMonth.getMonth() === date.getMonth();
+  const isToday =
+    date.getDate() === new Date().getDate() &&
+    date.getMonth() === new Date().getMonth() &&
+    date.getFullYear() === new Date().getFullYear();
+
+  return (
+    <button
+    className={cn("relative size-12 md:size-20 lg:size-34 p-1 flex flex-col items-end justify-start",
+        currentMonth ? "text-black" : "text-gray-400",
+        isToday ? "bg-accent text-accent-foreground" : "hover:bg-white",
+        "overflow-hidden border-0.5  border-wushu-red-100  hover:bg-white"
+    )}
+    >
+      <p className=" md:text-lg lg:text-2xl md:pr-1 lg:p-0.5 font-normal aria-selected:opacity-100 text-right">{date.getDate()}</p>
+
+      {events?.map(({ title, start, end, location, description }, index) => {
+        const startDate = new Date(start as string);
+
+        if (
+          startDate.getDate() === date.getDate() &&
+          startDate.getMonth() === date.getMonth() &&
+          startDate.getFullYear() === date.getFullYear()
+        ) {
+          return (
+            <div
+              className="my-1 cursor-pointer text-ellipsis bg-fencing-border-blue bg-opacity-75 p-1 text-center text-black hover:bg-opacity-100"
+              key={index}
+              onClick={() =>
+                setCurrent({ title, start, end, location, description })
+              }
+            >
+              {startDate.getHours() < 12
+                ? (startDate.getHours() % 12) + "am"
+                : (startDate.getHours() % 12) + "pm"}{" "}
+              {title}
+            </div>
+          );
+        }
+      })}
+    </button>
+  );
+};
+      
+
 const calendarAnimated = {
   hidden: { opacity: 0, scale: 0 },
   visible: {
@@ -24,8 +102,10 @@ function CalendarUI({
   className,
   classNames,
   showOutsideDays = true,
+  events,
+  setCurrent,
   ...props
-}: React.ComponentProps<typeof DayPicker>) {
+}:  CalendarProps) {
   return (
     <motion.div initial="hidden" animate="visible" variants={calendarAnimated}>
       <DayPicker
@@ -86,6 +166,14 @@ function CalendarUI({
           IconRight: ({ className, ...props }) => (
             <ChevronRight className={cn("lg:size-10", className)} {...props} />
           ),
+          Day: ({ displayMonth, date }) => (
+          <Day
+            date={date}
+            displayMonth={displayMonth}
+            events={events}
+            setCurrent={setCurrent}
+          />
+        ),
         }}
         {...props}
       />
