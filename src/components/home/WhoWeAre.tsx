@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Header from "../Header";
+import Header from "@/components/Header";
 import { motion } from "framer-motion";
 
 const UpDown = {
@@ -45,8 +45,8 @@ const fade = {
 
 const WhoWeAre = () => {
   return (
-    <div className="flex w-full flex-col content-start gap-1 p-10 md:flex-row lg:flex-row">
-      <div className="flex w-2/3 flex-col items-center">
+    <div className="flex w-full flex-col content-start gap-1 px-10 md:flex-row">
+      <div className="w-2/3 items-center">
         <div>
           <motion.div
             variants={DownUp}
@@ -65,13 +65,6 @@ const WhoWeAre = () => {
             custom={0}
           >
             <div className="bg-wushu-red-200 mt-9">
-              {/* <motion.div
-              variants={animation}
-              initial = "initial"
-              whileInView= "animate"
-              viewport={{once: true, amount: 0.5}}
-              custom={0}
-            >  */}
               <Image
                 src="/images/who_we_are/who_we_are_img.webp"
                 alt="Who We Are"

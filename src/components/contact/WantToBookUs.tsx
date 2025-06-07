@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import GroupPhoto from "@/public/images/contact_us/want_to_book_us.webp";
 import WushuLogo from "@/public/logos/wushufront.svg";
-import Header from "../Header";
+import Header from "@/components/Header";
 
 const email = `mailto:wushu.ucriverside@gmail.com?subject=${encodeURIComponent("Wushu Performance Request")}&body=${encodeURIComponent(`Hi Wushu club,
 
