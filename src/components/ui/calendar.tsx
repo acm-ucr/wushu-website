@@ -49,15 +49,15 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
   return (
     <button
       className={cn(
-        "relative flex size-12 flex-col items-end justify-start p-1 md:size-20 lg:size-34",
+        "relative flex size-12 flex-col justify-start p-1 md:size-24 lg:size-34",
         currentMonth ? "text-black" : "text-gray-400",
         isToday ? "bg-accent text-accent-foreground" : "hover:bg-white",
-        "border-0.5 border-wushu-red-100 overflow-hidden hover:bg-white",
+        "scrollbar-hidden border-0.5 border-wushu-red-100 h-18 overflow-hidden overflow-y-scroll border hover:bg-white",
       )}
     >
-      <p className="text-right font-normal aria-selected:opacity-100 md:pr-1 md:text-lg lg:p-0.5 lg:text-2xl">
+      <span className="text-right font-normal aria-selected:opacity-100 md:pr-1 md:text-lg lg:p-0.5 lg:text-2xl">
         {date.getDate()}
-      </p>
+      </span>
 
       {events?.map(({ title, start, end, location, description }, index) => {
         const startDate = new Date(start as string);
@@ -69,7 +69,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
         ) {
           return (
             <div
-              className="bg-fencing-border-blue bg-opacity-75 hover:bg-opacity-100 my-1 cursor-pointer p-1 text-center text-ellipsis text-black"
+              className="bg-wushu-red-300 bg-opacity-25 hover:bg-opacity-50 font-khula cursor-pointer rounded-md p-0.5 text-center font-bold text-ellipsis text-white"
               key={index}
               onClick={() =>
                 setCurrent({ title, start, end, location, description })
@@ -122,7 +122,7 @@ function CalendarUI({
           month: "flex flex-col gap-4",
           caption: "flex justify-center pt-1 relative items-center w-full",
           caption_label:
-            " text-lg md:text-4xl lg:text-6xl font-semibold font-khula text-wushu-red-100",
+            " text-2xl md:text-4xl lg:text-6xl font-semibold font-khula text-wushu-red-100",
           nav: "flex items-center gap-1",
           nav_button: cn(
             buttonVariants({ variant: "outline" }),

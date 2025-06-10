@@ -61,11 +61,13 @@ const Events = () => {
             open={Object.keys(current).length > 0}
             onOpenChange={() => setCurrent({})}
           >
-            <DialogContent>
+            <DialogContent className="bg-wushu-cream-100 h-52">
               <DialogHeader>
                 <DialogTitle>
-                  <p className="text-xl">{current.title}</p>
-                  <p className="text-base font-normal">
+                  <p className="font-khula text-wushu-red-100 text-2xl">
+                    {current.title}
+                  </p>
+                  <p className="text-md mt-4 font-normal">
                     {current.location} from{" "}
                     {new Date(current.start as string).toLocaleTimeString(
                       "en-US",
@@ -100,7 +102,7 @@ const Events = () => {
         <CalendarUI
           mode="single"
           selected={new Date()}
-          className="w-full"
+          className="h-screen"
           events={data}
           setCurrent={setCurrent}
         />
