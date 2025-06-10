@@ -61,7 +61,7 @@ const Events = () => {
             open={Object.keys(current).length > 0}
             onOpenChange={() => setCurrent({})}
           >
-            <DialogContent className="bg-wushu-cream-100 h-52">
+            <DialogContent className="bg-wushu-cream-100 h-48">
               <DialogHeader>
                 <DialogTitle>
                   <p className="font-khula text-wushu-red-100 text-2xl">

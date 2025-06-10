@@ -52,7 +52,7 @@ const Day = ({ date, displayMonth, events, setCurrent }: DayProps) => {
         "relative flex size-12 flex-col justify-start p-1 md:size-24 lg:size-34",
         currentMonth ? "text-black" : "text-gray-400",
         isToday ? "bg-accent text-accent-foreground" : "hover:bg-white",
-        "scrollbar-hidden border-0.5 border-wushu-red-100 h-18 overflow-hidden overflow-y-scroll border hover:bg-white",
+        "border-0.5 border-wushu-red-100 scrollbar-hidden h-18 overflow-y-auto border hover:bg-white",
       )}
     >
       <span className="text-right font-normal aria-selected:opacity-100 md:pr-1 md:text-lg lg:p-0.5 lg:text-2xl">
