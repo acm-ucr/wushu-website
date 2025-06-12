@@ -21,15 +21,15 @@ const BoardMemberMap = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {BoardMembers.map((Member) => (
+      {BoardMembers.map(({key, photo, position, name, year, major, pronouns}) => (
         <BoardMemberCard
-          key={Member.key}
-          photo={Member.photo}
-          position={Member.position}
-          name={Member.name}
-          year={Member.year}
-          major={Member.major}
-          pronouns={Member.pronouns}
+          key={key}
+          photo={photo}
+          position={position}
+          name={name}
+          year={year}
+          major={major}
+          pronouns={pronouns}
         />
       ))}
     </motion.div>
