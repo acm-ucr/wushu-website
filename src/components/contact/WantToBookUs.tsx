@@ -1,11 +1,16 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import GroupPhoto from "@/public/images/contact_us/want_to_book_us.webp";
 import WushuLogo from "@/public/logos/wushufront.svg";
 import Header from "@/components/Header";
+import { motion } from "framer-motion";
 
-const email = `mailto:wushu.ucriverside@gmail.com?subject=${encodeURIComponent("Wushu Performance Request")}&body=${encodeURIComponent(`Hi Wushu club,
+const email = `mailto:wushu.ucriverside@gmail.com?subject=${encodeURIComponent(
+  "Wushu Performance Request",
+)}&body=${encodeURIComponent(`Hi Wushu club,
 
 We would like you to perform at our event! Here are some details:
 Organization: 
@@ -16,12 +21,37 @@ Other details:
 
 Thank you!`)}`;
 
+const slideInLeft = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0 },
+};
+
+const slideInBottom = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const WantToBookUs = () => {
   return (
     <div className="m-7">
-      <Header title="WANT TO BOOK US?" isRed={true} />
+      <motion.div
+        variants={slideInLeft}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.6 }}
+      >
+        <Header title="WANT TO BOOK US?" isRed={true} />
+      </motion.div>
+
       <div className="flex flex-col pb-44 lg:flex-row">
-        <div>
+        <motion.div
+          variants={slideInBottom}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.4 }}
+        >
           <div className="font-arimo text-wushu-red-100 w-xs pt-10 text-sm md:mr-8 md:w-2xl md:text-2xl">
             We love to perform for school events as well as off-campus
             organizations! We’ve performed for APSP, ASPB, CSA, NSU, and more on
@@ -30,27 +60,44 @@ const WantToBookUs = () => {
             logistical details about the event! We perform for free and our
             performances are usually within 10 minutes of runtime.
           </div>
+
           <div className="flex h-80 w-xl items-center md:justify-center">
-            <Link
-              className="border-wushu-gold-100 flex h-45 w-80 items-center justify-center rounded-2xl border-6 bg-white"
-              href={email}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="group"
             >
-              <Image
-                src={WushuLogo}
-                alt="Wushu Logo"
-                className="h-40 object-contain"
-              />
-              <div className="text-wushu-red-100 font-amaranth flex w-76 text-left text-4xl font-bold">
-                Email Us!
-              </div>
-            </Link>
+              <Link
+                href={email}
+                className="border-wushu-gold-100 group-hover:bg-wushu-red-200 flex h-45 w-80 items-center justify-center rounded-2xl border-6 bg-white transition-colors duration-300"
+              >
+                <Image
+                  src={WushuLogo}
+                  alt="Wushu Logo"
+                  className="h-40 object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+                />
+                <div className="text-wushu-red-100 font-amaranth flex w-76 text-left text-4xl font-bold transition-colors duration-300 group-hover:text-white">
+                  Email Us!
+                </div>
+              </Link>
+            </motion.div>
           </div>
-        </div>
-        <Image
-          src={GroupPhoto}
-          alt="Wushu Group Photo"
-          className="object-contain"
-        />
+        </motion.div>
+
+        <motion.div
+          variants={slideInBottom}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          <Image
+            src={GroupPhoto}
+            alt="Wushu Group Photo"
+            className="object-contain"
+          />
+        </motion.div>
       </div>
     </div>
   );
