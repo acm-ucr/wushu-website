@@ -1,5 +1,5 @@
 "use client";
-import BoardMemberCard from "./BoardMemberCard";
+import BoardMemberCard from "./Card";
 import { BoardMembers } from "../../data/BoardMembers";
 import { motion } from "framer-motion";
 
