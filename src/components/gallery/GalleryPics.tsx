@@ -22,6 +22,7 @@ import image21 from "@/public/images/gallery/gallery_group2.webp";
 import image22 from "@/public/images/gallery/gallery_group1.webp";
 import image23 from "@/public/images/gallery/gallery_fan.webp";
 import image24 from "@/public/images/gallery/gallery_bottom.webp";
+import Header from "@/components/Header";
 
 const images = [
   image1,
@@ -54,12 +55,7 @@ const GalleryPics = () => {
   return (
     <div className="flex w-screen">
       <div className="w-full">
-        <div className="text-wushu-red-300 font-margasa absolute -mx-2 my-2 mb-6 p-30 text-7xl font-extrabold">
-          GALLERY
-        </div>
-        <div className="text-wushu-gold-100 font-margasa relative z-10 mb-6 p-30 pb-5 text-7xl font-extrabold">
-          GALLERY
-        </div>
+        <Header title="GALLERY" isRed={true} />
         <div className="grid grid-cols-4 gap-6 px-30">
           {images.map((img, idx) => {
             return (

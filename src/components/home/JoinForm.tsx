@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "@/components/Header";
 
 const JoinForm = () => {
@@ -19,7 +18,7 @@ const JoinForm = () => {
       </h1>
       <a
         href="https://discord.gg/xvCtPYCBcQ"
-        className="ring-wushu-gold-100 bg-wushu-white-100 hover:bg-wushu-red-200 text-wushu-red-100 text-md mb-48 block w-fit rounded-xl px-6 py-4 text-center font-bold ring-4 transition duration-300 hover:text-white md:mb-2 md:text-xl lg:mb-2 lg:text-2xl"
+        className="ring-wushu-gold-100 bg-wushu-white-100 hover:bg-wushu-red-200 text-wushu-red-100 text-md mb-48 block w-fit rounded-xl px-6 pt-5 pb-4 text-center font-bold ring-4 transition duration-300 hover:text-white md:mb-2 md:text-xl lg:mb-2 lg:text-2xl"
       >
         JOIN OUR DISCORD HERE!
       </a>

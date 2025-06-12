@@ -1,9 +1,9 @@
-import abby from "../../public/images/meet_the_board/board-abby.webp";
-import adam from "../../public/images/meet_the_board/board-adam.webp";
-import al from "../../public/images/meet_the_board/board-al...webp";
-import gio from "../../public/images/meet_the_board/board-Giooo.webp";
-import min from "../../public/images/meet_the_board/board-MIN.webp";
-import ray from "../../public/images/meet_the_board/board-rayyy.webp";
+import abby from "@/public/images/meet_the_board/board-abby.webp";
+import adam from "@/public/images/meet_the_board/board-adam.webp";
+import al from "@/public/images/meet_the_board/board-al...webp";
+import gio from "@/public/images/meet_the_board/board-Giooo.webp";
+import min from "@/public/images/meet_the_board/board-MIN.webp";
+import ray from "@/public/images/meet_the_board/board-rayyy.webp";
 
 export const BoardMembers = [
   {
