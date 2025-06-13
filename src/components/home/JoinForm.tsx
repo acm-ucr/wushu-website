@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Link from "next/link";
 
 const JoinForm = () => {
   return (
@@ -16,12 +17,14 @@ const JoinForm = () => {
           where you can chat or learn more about Wushu!
         </div>
       </h1>
-      <a
+      <Link
         href="https://discord.gg/xvCtPYCBcQ"
+        target="_blank"
+        rel="noopener noreferrer"
         className="ring-wushu-gold-100 bg-wushu-white-100 hover:bg-wushu-red-200 text-wushu-red-100 text-md mb-48 block w-fit rounded-xl px-6 pt-5 pb-4 text-center font-bold ring-4 transition duration-300 hover:text-white md:mb-2 md:text-xl lg:mb-2 lg:text-2xl"
       >
         JOIN OUR DISCORD HERE!
-      </a>
+      </Link>
     </div>
   );
 };
