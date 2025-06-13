@@ -1,7 +1,7 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
 import Header from "@/components/Header";
-import { snapshots } from "@/data/snapshots";
+import { snapshots } from "@/data/Snapshots";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 

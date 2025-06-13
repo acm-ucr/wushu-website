@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Weapons } from "@/data/linebreak";
+import { Weapons } from "@/data/LineBreak";
 import Image from "next/image";
 
 const LineBreak = () => {

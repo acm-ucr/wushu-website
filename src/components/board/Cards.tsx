@@ -1,6 +1,6 @@
 "use client";
 import BoardMemberCard from "@/components/board/Card";
-import { BoardMembers } from "@/data/boardmembers";
+import { BoardMembers } from "@/data/BoardMembers";
 import { motion } from "framer-motion";
 
 const containerVariants = {
