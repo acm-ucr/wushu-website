@@ -32,7 +32,7 @@ const WantToBookUs = () => {
           </div>
           <div className="flex h-80 w-xl items-center md:justify-center">
             <Link
-              className="border-wushu-gold-100 flex h-45 w-80 items-center justify-center rounded-2xl border-6 bg-white"
+              className="border-wushu-gold-100 hover:bg-wushu-red-200 flex h-45 w-80 items-center justify-center rounded-2xl border-6 bg-white transition duration-300 hover:text-white"
               href={email}
             >
               <Image
