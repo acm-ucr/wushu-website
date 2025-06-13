@@ -1,6 +1,6 @@
 "use client";
 import WushuLogo from "@/public/images/home/wushulogo.svg";
-import { tags } from "@/data/Navigation";
+import { tags } from "@/data/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
