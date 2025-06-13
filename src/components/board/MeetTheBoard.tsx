@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import photo1 from "@/public/images/meet_the_board/meet_the_board.webp";
 
 const slideInVariant = {
   initial: { opacity: 0, x: 20 },
@@ -27,7 +28,7 @@ const MeetTheBoard = () => {
         custom={0}
       >
         <Image
-          src="/images/meet_the_board/meet_the_board.webp"
+          src={photo1}
           alt="Wushu Board Group Photo"
           width={600}
           height={500}
