@@ -2,7 +2,7 @@
 import WushuLogo from "@/public/images/home/wushulogo.svg";
 import Link from "next/link";
 import Image from "next/image";
-import { tags } from "@/data/Navigation";
+import { tags } from "@/data/Nav";
 import { usePathname } from "next/navigation";
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
