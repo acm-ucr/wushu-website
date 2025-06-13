@@ -24,7 +24,7 @@ interface SnapshotsProps {
 const Snapshots = ({ photos = snapshots }: SnapshotsProps) => {
   return (
     <div className="relative m-20">
-      <Header title={"SNAPSHOTS"} isRed={true}></Header>
+      <Header title="SNAPSHOTS" isRed={true}></Header>
       <div className="flex items-center justify-center gap-7">
         <Swiper
           effect={"coverflow"}

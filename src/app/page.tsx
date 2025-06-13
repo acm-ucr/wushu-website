@@ -5,12 +5,12 @@ import Snapshots from "@/components/home/Snapshots";
 
 const Home = () => {
   return (
-    <div className="">
+    <>
       <WhoWeAre />
       <LocationAndTime />
       <JoinForm />
       <Snapshots />
-    </div>
+    </>
   );
 };
 
