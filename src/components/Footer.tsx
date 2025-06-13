@@ -4,7 +4,7 @@ import logo from "@/public/logos/logo.svg";
 import Link from "next/link";
 import Image from "next/image";
 import gold from "@/public/logos/goldcorners.svg";
-import { links } from "@/data/Footer";
+import { links } from "@/data/footer";
 import { motion } from "framer-motion";
 
 const HoverAnimation = ({ children }: { children: React.ReactNode }) => {
