@@ -38,11 +38,11 @@ const Performance = ({
           : "flex-row-reverse md:flex-row-reverse"
       }`}
     >
-      <div className="flex w-full justify-center px-6 sm:px-10 md:w-1/2 md:px-14">
+      <div className="flex justify-center px-6 sm:px-10 md:w-1/2 md:px-14">
         <img
           src={imageSrc}
           alt={title}
-          className="min-h-sm w-full max-w-xs object-contain sm:max-w-md md:max-w-full"
+          className="min-h-sm w-full max-w-xs object-contain sm:max-w-md"
         />
       </div>
       <div className="w-full px-1 text-left sm:px-6 md:w-1/2 md:px-14">
