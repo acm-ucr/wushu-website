@@ -22,7 +22,7 @@ const WantToBookUs = () => {
       <Header title="WANT TO BOOK US?" isRed={true} />
       <div className="flex flex-col pb-44 lg:flex-row">
         <div>
-          <div className="font-arimo text-wushu-red-100 w-xs pt-10 text-sm md:mr-8 md:w-2xl md:text-2xl">
+          <div className="font-arimo text-wushu-red-100 mr-7 pt-10 text-sm md:text-2xl">
             We love to perform for school events as well as off-campus
             organizations! We’ve performed for APSP, ASPB, CSA, NSU, and more on
             campus, as well as for the Rancho Cucamonga Lunar New Year Festival
@@ -30,7 +30,7 @@ const WantToBookUs = () => {
             logistical details about the event! We perform for free and our
             performances are usually within 10 minutes of runtime.
           </div>
-          <div className="flex h-80 w-xl items-center md:justify-center">
+          <div className="flex h-80 items-center md:justify-center">
             <Link
               className="border-wushu-gold-100 hover:bg-wushu-red-200 flex h-45 w-80 items-center justify-center rounded-2xl border-6 bg-white transition duration-300 hover:text-white"
               href={email}
@@ -49,7 +49,7 @@ const WantToBookUs = () => {
         <Image
           src={GroupPhoto}
           alt="Wushu Group Photo"
-          className="object-full"
+          className="justify-center object-contain"
         />
       </div>
     </div>
