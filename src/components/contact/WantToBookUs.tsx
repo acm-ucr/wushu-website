@@ -40,7 +40,7 @@ const WantToBookUs = () => {
                 alt="Wushu Logo"
                 className="h-40 object-contain"
               />
-              <div className="text-wushu-red-100 font-amaranth flex w-76 text-left text-4xl font-bold">
+              <div className="text-wushu-red-100 font-amaranth flex w-64 text-left text-4xl font-bold">
                 Email Us!
               </div>
             </Link>
@@ -49,7 +49,7 @@ const WantToBookUs = () => {
         <Image
           src={GroupPhoto}
           alt="Wushu Group Photo"
-          className="object-contain"
+          className="object-full"
         />
       </div>
     </div>
