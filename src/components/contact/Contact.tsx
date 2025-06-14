@@ -1,22 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
+import wushuContactPic from "@/public/images/contact_us/contact_us.webp";
 
 const Contact = () => {
   return (
     <div className="bg-wushu-cream flex flex-col items-center justify-center gap-10 px-4 py-10 md:flex-row md:px-20">
       <div className="w-full md:w-1/2">
-        <div className="w-full">
-          <Image
-            src="/images/contact_us/contact_us.webp"
-            alt="Wushu Club Contact"
-            width={600}
-            height={400}
-            className="ring-wushu-gold-200 h-auto w-full rounded-lg shadow-lg ring-4"
-            sizes="(max-width: 768px) 100vw, 50vw"
-            priority
-          />
-        </div>
+        <Image
+          src={wushuContactPic}
+          alt="Wushu Club Contact"
+          className="ring-wushu-gold-200 w-full rounded-lg shadow-lg ring-4"
+          priority
+        />
       </div>
 
       <div className="text-wushu-gold-100 w-full md:w-1/2">

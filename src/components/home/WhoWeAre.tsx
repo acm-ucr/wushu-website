@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Image from "next/image";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
@@ -45,7 +44,7 @@ const fade = {
 
 const WhoWeAre = () => {
   return (
-    <div className="flex w-full flex-col content-start gap-1 px-10 md:flex-row">
+    <div className="flex flex-col content-start gap-1 px-10 md:flex-row">
       <div className="w-2/3 items-center">
         <div>
           <motion.div

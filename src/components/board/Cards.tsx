@@ -1,6 +1,6 @@
 "use client";
-import BoardMemberCard from "./BoardMemberCard";
-import { BoardMembers } from "../../data/BoardMembers";
+import BoardMemberCard from "@/components/board/Card";
+import { BoardMembers } from "@/data/BoardMembers";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -21,17 +21,19 @@ const BoardMemberMap = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      {BoardMembers.map((Member) => (
-        <BoardMemberCard
-          key={Member.key}
-          photo={Member.photo}
-          position={Member.position}
-          name={Member.name}
-          year={Member.year}
-          major={Member.major}
-          pronouns={Member.pronouns}
-        />
-      ))}
+      {BoardMembers.map(
+        ({ key, photo, position, name, year, major, pronouns }) => (
+          <BoardMemberCard
+            key={key}
+            photo={photo}
+            position={position}
+            name={name}
+            year={year}
+            major={major}
+            pronouns={pronouns}
+          />
+        ),
+      )}
     </motion.div>
   );
 };

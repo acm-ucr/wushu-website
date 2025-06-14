@@ -52,7 +52,7 @@ const WantToBookUs = () => {
           transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.4 }}
         >
-          <div className="font-arimo text-wushu-red-100 w-xs pt-10 text-sm md:mr-8 md:w-2xl md:text-2xl">
+          <div className="font-arimo text-wushu-red-100 mr-7 pt-10 text-sm md:mr-8 md:w-2xl md:text-2xl">
             We love to perform for school events as well as off-campus
             organizations! We’ve performed for APSP, ASPB, CSA, NSU, and more on
             campus, as well as for the Rancho Cucamonga Lunar New Year Festival
@@ -61,7 +61,7 @@ const WantToBookUs = () => {
             performances are usually within 10 minutes of runtime.
           </div>
 
-          <div className="flex h-80 w-xl items-center md:justify-center">
+          <div className="flex h-80 items-center md:justify-center">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
@@ -77,7 +77,7 @@ const WantToBookUs = () => {
                   alt="Wushu Logo"
                   className="h-40 object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
                 />
-                <div className="text-wushu-red-100 font-amaranth flex w-76 text-left text-4xl font-bold transition-colors duration-300 group-hover:text-white">
+                <div className="text-wushu-red-100 font-amaranth flex w-64 text-left text-4xl font-bold group-hover:text-white">
                   Email Us!
                 </div>
               </Link>

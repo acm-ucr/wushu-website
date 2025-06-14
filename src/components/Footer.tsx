@@ -4,7 +4,7 @@ import logo from "@/public/logos/logo.svg";
 import Link from "next/link";
 import Image from "next/image";
 import gold from "@/public/logos/goldcorners.svg";
-import { links } from "@/data/footer";
+import { links } from "@/data/FooterData";
 import { motion } from "framer-motion";
 
 const HoverAnimation = ({ children }: { children: React.ReactNode }) => {
@@ -44,10 +44,10 @@ const Footer = () => {
             />
           </div>
 
-          {links.map((item, index) => (
+          {links.map(({ link, icon }, index) => (
             <HoverAnimation key={index}>
-              <Link href={item.link} target="_blank" key={index} className="">
-                <Image src={item.icon} alt="" />
+              <Link href={link} target="_blank" key={index} className="">
+                <Image src={icon} alt="" />
               </Link>
             </HoverAnimation>
           ))}

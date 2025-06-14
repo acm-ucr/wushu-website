@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Image from "next/image";
 import Header from "@/components/Header";
 import { motion } from "framer-motion";
@@ -45,7 +44,7 @@ const fade = {
 
 const LocationAndTime = () => {
   return (
-    <div className="bg-wushu-cream-100 flex w-full flex-col rounded-md p-5 md:flex-row md:p-8 lg:flex-row lg:p-10">
+    <div className="bg-wushu-cream-100 flex flex-col rounded-md p-5 md:flex-row md:p-8 lg:flex-row lg:p-10">
       <div className="flex w-2/3 flex-col justify-items-center gap-1 rounded-md md:p-5 lg:p-10">
         <motion.div
           variants={DownUp}
