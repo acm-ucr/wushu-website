@@ -1,4 +1,4 @@
-import WushuCalendar from "../../components/events/calendar/calendar";
+import WushuCalendar from "../../components/events/calendar/build_calendar";
 
 const Calendar = () => {
   return (
