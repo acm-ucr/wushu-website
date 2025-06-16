@@ -34,6 +34,9 @@ const BoardMemberCard: React.FC<BoardMemberCardProps> = ({
   return (
     <motion.div
       variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }} // trigger animation when ~30% visible
       className="font-arimo justify-items-center -tracking-[0.1em] whitespace-nowrap"
     >
       <Image src={photo} alt={`Photo of ${name}`} />
