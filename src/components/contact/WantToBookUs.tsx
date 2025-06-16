@@ -44,7 +44,7 @@ const WantToBookUs = () => {
         <Header title="WANT TO BOOK US?" isRed={true} />
       </motion.div>
 
-      <div className="flex flex-col pb-44 lg:flex-row">
+      <div className="flex flex-col md:pb-44 lg:flex-row">
         <motion.div
           variants={slideInBottom}
           initial="hidden"
