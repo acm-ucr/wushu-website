@@ -1,7 +1,9 @@
+import WushuCalendar from "../../components/events/calendar/build_calendar";
+
 const Calendar = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Calendar
+    <div className="flex items-center justify-center">
+      <WushuCalendar></WushuCalendar>
     </div>
   );
 };
