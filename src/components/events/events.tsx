@@ -102,7 +102,7 @@ const Events = () => {
         <CalendarUI
           mode="single"
           selected={new Date()}
-          className="h-screen"
+          className=""
           events={data}
           setCurrent={setCurrent}
         />

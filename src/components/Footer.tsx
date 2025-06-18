@@ -16,7 +16,7 @@ const HoverAnimation = ({ children }: { children: React.ReactNode }) => {
 };
 const Footer = () => {
   return (
-    <div className="relative w-full items-center">
+    <div className="relative w-full items-center pt-50">
       <Image
         src={cloudfooter}
         alt="cloudfooter"
