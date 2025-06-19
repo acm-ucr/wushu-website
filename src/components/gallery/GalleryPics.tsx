@@ -56,14 +56,14 @@ const GalleryPics = () => {
     <div className="flex w-screen">
       <div className="w-full">
         <Header title="GALLERY" isRed={true} />
-        <div className="grid grid-cols-2 gap-6 px-5 md:grid-cols-4 md:px-30">
+        <div className="grid grid-cols-1 gap-6 px-5 md:grid-cols-4 md:px-30">
           {images.map((img, idx) => {
             return (
               <img
                 key={idx}
                 src={img.src}
                 alt={`Gallery image ${idx + 1}`}
-                className={`h-auto w-full object-cover${idx === 20 || idx === 21 || idx === 23 ? "col-span-2" : ""}`}
+                className={`object-cover${idx === 20 || idx === 21 || idx === 23 ? "col-span-2" : ""}`}
               />
             );
           })}
