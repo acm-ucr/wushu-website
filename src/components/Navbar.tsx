@@ -28,10 +28,10 @@ const Navbar = () => {
         className="text-wushu-red-100 mx-12 my-6 text-3xl md:hidden"
         onClick={handleMobileMenu}
       />
-      {tags.map(({ name, link }, index) => (
+      {tags.map(({ name, link }, path) => (
         <Link
           href={link}
-          key={index}
+          key={path}
           className={`text-wushu-red-100 font-khula hidden items-center text-2xl tracking-tight whitespace-nowrap md:flex xl:text-3xl ${pathName === link ? "font-bold" : ""}`}
         >
           {name}
@@ -41,10 +41,10 @@ const Navbar = () => {
       <div
         className={`border-wushu-red-100 font-arimo text-wushu-red-100 bg-wushu-cream-100 absolute top-full right-0 flex w-1/2 flex-col gap-x-5 border-2 md:hidden ${showMobileMenu ? animation : "hidden"}`}
       >
-        {tags.map(({ name, link }, index) => (
+        {tags.map(({ name, link }, path) => (
           <Link
             href={link}
-            key={index}
+            key={path}
             className={`${pathName === link ? "font-bold" : ""} px-4 pb-2`}
           >
             {name}
