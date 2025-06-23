@@ -53,16 +53,16 @@ export default function RootLayout({ children }: LayoutProps) {
         className={`bg-wushu-cream-100 w-screen ${arimo.className} ${amaranth.className} ${inter.className} ${khula.className} ${magra.className}`}
       >
         <Navbar />
-        <div className="mt-12 flex w-full justify-between px-12 lg:mt-6 lg:-mb-12">
+        <div className="absolute mt-6 flex w-full justify-between px-4 md:mt-12 md:px-12 lg:mt-6 lg:-mb-12">
           <Image
             src={Border}
             alt="Border left"
-            className="hidden w-30 rotate-270 lg:block"
+            className="block w-14 rotate-270 md:w-30"
           />
           <Image
             src={Border}
             alt="Border right"
-            className="hidden w-30 lg:block"
+            className="block w-14 md:w-30"
           />
         </div>
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
