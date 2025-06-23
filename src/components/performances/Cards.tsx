@@ -8,7 +8,7 @@ const Cards = () => {
   return (
     <div className="px-4">
       <div className="relative">
-        <div className="absolute top-25 left-1/2 h-370 w-0.5 -translate-x-1/2 bg-[#C69A1F] sm:top-30 sm:h-375 sm:w-0.5 md:top-40 md:h-590 md:w-1 lg:h-590 lg:w-1" />
+        <div className="bg-wushu-gold-300 absolute top-25 left-1/2 h-370 w-0.5 -translate-x-1/2 sm:top-30 sm:h-375 sm:w-0.5 md:top-40 md:h-590 md:w-1 lg:h-590 lg:w-1" />
 
         <div className="absolute top-50 left-1/2 -translate-x-full md:top-78">
           <Image
@@ -59,13 +59,13 @@ const Cards = () => {
         </div>
 
         <div className="absolute left-1/2 z-10 mt-5 -translate-x-1/2 sm:mt-10 md:mt-15 lg:mt-15">
-          <div className="font-arimo mt-15 rounded-full bg-[#C69A1F] px-3 py-1 text-center text-sm font-semibold text-white sm:px-4 sm:py-2 sm:text-2xl md:px-4 md:py-2 md:text-2xl lg:px-4 lg:py-2 lg:text-2xl">
+          <div className="font-arimo bg-wushu-gold-300 mt-15 rounded-full px-3 py-1 text-center text-sm font-semibold text-white sm:px-4 sm:py-2 sm:text-2xl md:px-4 md:py-2 md:text-2xl lg:px-4 lg:py-2 lg:text-2xl">
             2024
           </div>
         </div>
 
         <div className="absolute left-1/2 z-10 mt-280 -translate-x-1/2 sm:mt-280 md:mt-434 lg:mt-434">
-          <div className="font-arimo rounded-full bg-[#C69A1F] px-3 py-1 text-center text-sm font-semibold text-white sm:px-4 sm:py-2 sm:text-2xl md:px-4 md:py-2 md:text-2xl lg:px-4 lg:py-2 lg:text-2xl">
+          <div className="font-arimo bg-wushu-gold-300 rounded-full px-3 py-1 text-center text-sm font-semibold text-white sm:px-4 sm:py-2 sm:text-2xl md:px-4 md:py-2 md:text-2xl lg:px-4 lg:py-2 lg:text-2xl">
             2023
           </div>
         </div>

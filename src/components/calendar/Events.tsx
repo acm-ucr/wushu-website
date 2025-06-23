@@ -15,7 +15,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-// import Title from "../Title";
 
 const Events = () => {
   const [current, setCurrent] = useState<EventProps>({});
@@ -49,7 +48,6 @@ const Events = () => {
 
   return (
     <>
-      {/* <Title text="Events" /> */}
       <motion.div
         className="box"
         initial={{ y: 30, opacity: 0 }}
