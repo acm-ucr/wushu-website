@@ -12,6 +12,8 @@ import "swiper/css/navigation";
 
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
+import { motion } from "framer-motion";
+
 interface Photo {
   src: StaticImageData;
   alt: string;
@@ -24,7 +26,15 @@ interface SnapshotsProps {
 const Snapshots = ({ photos = snapshots }: SnapshotsProps) => {
   return (
     <div className="relative m-20">
-      <Header title="SNAPSHOTS" isRed={true}></Header>
+      <motion.div
+        initial={{ opacity: 0, y: -20, x: -20 }}
+        whileInView={{ opacity: 1, y: 0, x: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        className=""
+      >
+        <Header title="SNAPSHOTS" isRed={true}></Header>
+      </motion.div>
       <div className="flex items-center justify-center gap-7">
         <Swiper
           effect={"coverflow"}
@@ -57,7 +67,13 @@ const Snapshots = ({ photos = snapshots }: SnapshotsProps) => {
         >
           {photos.map((item, index) => (
             <SwiperSlide>
-              <div className="flex items-center justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20, x: 20 }}
+                whileInView={{ opacity: 1, y: 0, x: 0 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                viewport={{ once: true, amount: 0.5 }}
+                className="flex items-center justify-center"
+              >
                 <Image
                   src={item.src}
                   alt={item.alt}
@@ -65,7 +81,7 @@ const Snapshots = ({ photos = snapshots }: SnapshotsProps) => {
                   width={500}
                   height={500}
                 />
-              </div>
+              </motion.div>
             </SwiperSlide>
           ))}
 
