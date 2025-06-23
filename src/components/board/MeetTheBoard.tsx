@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import photo1 from "@/public/images/meet_the_board/meet_the_board.webp";
 
 const slideInVariant = {
@@ -18,9 +18,9 @@ const slideInVariant = {
 
 const MeetTheBoard = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-10 px-6 py-12 md:flex-row">
+    <div className="flex flex-col items-center justify-center gap-10 px-6 pt-12 md:flex-row md:pt-30 md:pl-24">
       <motion.div
-        className="w-full md:w-1/2"
+        className="w-11/12 md:w-7/12"
         variants={slideInVariant}
         initial="initial"
         whileInView="animate"
@@ -37,7 +37,7 @@ const MeetTheBoard = () => {
         />
       </motion.div>
 
-      <div className="w-full justify-center md:w-1/2">
+      <div className="w-full text-center md:w-1/2 md:text-left">
         <motion.div
           custom={0.15}
           variants={slideInVariant}

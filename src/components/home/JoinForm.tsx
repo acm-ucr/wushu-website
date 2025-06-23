@@ -5,7 +5,7 @@ const JoinForm = () => {
   return (
     <div className="justify-left w-full flex-col px-10 lg:px-25">
       <Header title="HOW TO JOIN" isRed={true} />
-      <h1 className="text-wushu-red-100 text-md mt-3 mb-2 max-w-md text-left md:mt-6 md:text-xl lg:mt-6 lg:mb-5 lg:text-2xl">
+      <h1 className="text-wushu-red-100 text-md font-arimo mt-3 mb-10 max-w-md text-left md:mt-6 md:text-xl lg:mt-6 lg:text-2xl">
         <div>
           We are open to people of all experience levels, whether you have no
           experience or years of experience!
