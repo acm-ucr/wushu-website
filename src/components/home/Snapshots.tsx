@@ -25,7 +25,7 @@ interface SnapshotsProps {
 
 const Snapshots = ({ photos = snapshots }: SnapshotsProps) => {
   return (
-    <div className="relative m-20 -mt-36 -mb-2 md:mt-20 md:mb-0 lg:mb-0 lg:mt-20">
+    <div className="relative m-20 -mt-36 -mb-2 md:mt-20 md:mb-0 lg:mt-20 lg:mb-0">
       <motion.div
         initial={{ opacity: 0, y: -20, x: -20 }}
         whileInView={{ opacity: 1, y: 0, x: 0 }}
