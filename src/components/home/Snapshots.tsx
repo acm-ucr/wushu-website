@@ -25,7 +25,7 @@ interface SnapshotsProps {
 
 const Snapshots = ({ photos = snapshots }: SnapshotsProps) => {
   return (
-    <div className="relative m-20">
+    <div className="relative m-20 -mt-36 -mb-2 md:mt-20 md:mb-0 lg:mb-0 lg:mt-20">
       <motion.div
         initial={{ opacity: 0, y: -20, x: -20 }}
         whileInView={{ opacity: 1, y: 0, x: 0 }}
@@ -54,10 +54,10 @@ const Snapshots = ({ photos = snapshots }: SnapshotsProps) => {
           style={{ width: "100rem" }}
           breakpoints={{
             640: {
-              slidesPerView: 1,
+              slidesPerView: 3,
             },
             768: {
-              slidesPerView: 2,
+              slidesPerView: 3,
             },
             1024: {
               slidesPerView: 3,
