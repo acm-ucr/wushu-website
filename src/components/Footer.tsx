@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import gold from "@/public/logos/goldcorners.svg";
 import { links } from "@/data/FooterData";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const HoverAnimation = ({ children }: { children: React.ReactNode }) => {
   return (
