@@ -1,7 +1,7 @@
 "use client";
 import Header from "@/components/Header";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const JoinForm = () => {
   return (
@@ -9,8 +9,8 @@ const JoinForm = () => {
       <motion.div
         initial={{ opacity: 0, y: -20, x: -20 }}
         whileInView={{ opacity: 1, y: 0, x: 20 }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.7, delay: 0.2 }}
-        className=""
       >
         <Header title="HOW TO JOIN" isRed={true} />
       </motion.div>
@@ -18,8 +18,8 @@ const JoinForm = () => {
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className=""
         >
           <div>
             We are open to people of all experience levels, whether you have no
@@ -36,8 +36,8 @@ const JoinForm = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.7, delay: 0.2 }}
-        className=""
       >
         <Link
           href="https://discord.gg/xvCtPYCBcQ"
