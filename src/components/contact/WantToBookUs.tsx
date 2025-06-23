@@ -75,24 +75,32 @@ const WantToBookUs = () => {
         </motion.div>
       </div>
       <motion.div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.97 }}
-        transition={{ type: "spring", stiffness: 300 }}
-        className="flex h-80 justify-center pt-10 md:mt-0"
+        variants={slideInBottom}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.5 }}
       >
-        <Link
-          href={email}
-          className="border-wushu-gold-100 group-hover:bg-wushu-red-200 flex h-45 w-80 items-center justify-center rounded-2xl border-6 bg-white transition-colors duration-300"
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
+          transition={{ type: "spring", stiffness: 300 }}
+          className="flex h-80 justify-center pt-10 md:mt-0"
         >
-          <Image
-            src={WushuLogo}
-            alt="Wushu Logo"
-            className="h-40 object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
-          />
-          <div className="text-wushu-red-100 font-amaranth flex w-64 text-left text-4xl font-bold group-hover:text-white">
-            Email Us!
-          </div>
-        </Link>
+          <Link
+            href={email}
+            className="border-wushu-gold-100 group-hover:bg-wushu-red-200 flex h-45 w-80 items-center justify-center rounded-2xl border-6 bg-white transition-colors duration-300"
+          >
+            <Image
+              src={WushuLogo}
+              alt="Wushu Logo"
+              className="h-40 object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+            />
+            <div className="text-wushu-red-100 font-amaranth flex w-64 text-left text-4xl font-bold group-hover:text-white">
+              Email Us!
+            </div>
+          </Link>
+        </motion.div>
       </motion.div>
     </div>
   );
