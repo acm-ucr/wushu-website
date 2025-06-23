@@ -1,10 +1,10 @@
-import WushuCalendar from "../../components/events/calendar/build_calendar";
+import WushuCalendar from "@/components/calendar/BuildCalendar";
 
 const Calendar = () => {
   return (
-    <div className="flex items-center justify-center">
-      <WushuCalendar></WushuCalendar>
-    </div>
+    <>
+      <WushuCalendar />
+    </>
   );
 };
 

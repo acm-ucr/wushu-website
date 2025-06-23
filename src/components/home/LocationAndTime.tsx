@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import Header from "@/components/Header";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
+import locationInfoPic from "@/public/images/who_we_are/location_and_times_img.webp";
 
 const UpDown = {
   initial: { opacity: 0, x: 20, y: -20 },
@@ -44,8 +45,8 @@ const fade = {
 
 const LocationAndTime = () => {
   return (
-    <div className="bg-wushu-cream-100 flex flex-col rounded-md p-5 md:flex-row md:p-8 lg:flex-row lg:p-10">
-      <div className="flex w-2/3 flex-col justify-items-center gap-1 rounded-md md:p-5 lg:p-10">
+    <div className="bg-wushu-cream-100 flex flex-col rounded-md p-6 md:flex-row md:p-12 lg:flex-row">
+      <div className="flex flex-col justify-items-center gap-1 rounded-md md:w-2/3 md:p-5 lg:p-10">
         <motion.div
           variants={DownUp}
           initial="initial"
@@ -64,11 +65,9 @@ const LocationAndTime = () => {
         >
           <div className="bg-wushu-gold-100 mt-9">
             <Image
-              src="/images/who_we_are/location_and_times_img.webp"
+              src={locationInfoPic}
               alt="Location and Times (shows club participants all participating in an activity)"
-              width={3000}
-              height={3000}
-              className="translate-x-5 -translate-y-5"
+              className="translate-x-2 -translate-y-3 md:translate-x-3 md:-translate-y-5"
             />
           </div>
         </motion.div>
