@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 interface Photo {
   src: StaticImageData;
