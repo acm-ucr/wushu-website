@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { DayPicker, getDefaultClassNames } from "react-day-picker";
 import type { DayButton } from "react-day-picker";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 
@@ -37,13 +37,6 @@ export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
   setCurrent: (props: EventProps) => void;
   buttonVariant?: React.ComponentProps<typeof Button>["variant"];
 };
-
-// interface DayProps {
-//   date: Date;
-//   displayMonth: Date;
-//   events: EventProps[];
-//   setCurrent: (props: EventProps) => void;
-// }
 
 function Day(
   props: React.ComponentProps<typeof DayButton> & {
@@ -80,7 +73,7 @@ function Day(
               className="bg-wushu-red-300 bg-opacity-25 hover:bg-opacity-50 font-khula cursor-pointer rounded-md p-0.5 text-center text-sm font-bold text-ellipsis text-white lg:text-base"
               key={index}
               onClick={(e) => {
-                e.stopPropagation(); // Prevent conflict with default selection behavior
+                e.stopPropagation();
                 setCurrent({ title, start, end, location, description });
               }}
             >
@@ -128,7 +121,7 @@ function CalendarUI({
       <DayPicker
         showOutsideDays={showOutsideDays}
         className={cn(
-          "group/calendar bg-transparent p-3 [--cell-size:--spacing(8)] [[data-slot=card-content]_&]:bg-transparent [[data-slot=popover-content]_&]:bg-transparent",
+          "group/calendar bg-transparent [--cell-size:--spacing(8)] [[data-slot=card-content]_&]:bg-transparent [[data-slot=popover-content]_&]:bg-transparent",
           String.raw`rtl:**:[.rdp-button\_next>svg]:rotate-180`,
           String.raw`rtl:**:[.rdp-button\_previous>svg]:rotate-180`,
           className,
@@ -145,9 +138,9 @@ function CalendarUI({
             "flex gap-4 flex-col md:flex-row relative ",
             defaultClassNames.months,
           ),
-          month: cn("flex flex-col w-full gap-4", defaultClassNames.month),
+          month: cn("flex flex-col gap-4", defaultClassNames.month),
           nav: cn(
-            "flex items-center gap-1 w-full absolute top-0 inset-x-0 justify-between",
+            "flex items-center gap-1 absolute top-0 inset-x-0 justify-between",
             defaultClassNames.nav,
           ),
           button_previous: cn(
@@ -161,11 +154,11 @@ function CalendarUI({
             defaultClassNames.button_next,
           ),
           month_caption: cn(
-            "flex items-center justify-center h-(--cell-size) w-full px-(--cell-size)",
+            "flex items-center justify-center h-(--cell-size) px-(--cell-size)",
             defaultClassNames.month_caption,
           ),
           dropdowns: cn(
-            "w-full flex items-center text-sm font-medium justify-center h-(--cell-size) gap-1.5",
+            "flex items-center text-sm font-medium justify-center h-(--cell-size) gap-1.5",
             defaultClassNames.dropdowns,
           ),
           dropdown_root: cn(
@@ -183,13 +176,13 @@ function CalendarUI({
               : "rounded-md pl-2 pr-1 flex items-center gap-1 text-sm h-8 [&>svg]:text-muted-foreground [&>svg]:size-3.5",
             defaultClassNames.caption_label,
           ),
-          table: "w-full border-collapse",
+          table: "border-collapse",
           weekdays: cn("flex", defaultClassNames.weekdays),
           weekday: cn(
             "text-muted-foreground flex-1 font-normal text-[0.8rem] select-none bg-wushu-red-100 border border-wushu-red-100 text-muted-foreground font-normal text-white font-khula text-sm md:text-lg lg:text-2xl pt-1.5",
             defaultClassNames.weekday,
           ),
-          week: cn("flex w-full", defaultClassNames.week),
+          week: cn("flex", defaultClassNames.week),
           week_number_header: cn(
             "select-none w-(--cell-size)",
             defaultClassNames.week_number_header,
