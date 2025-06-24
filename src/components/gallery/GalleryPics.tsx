@@ -54,9 +54,11 @@ const images = [
 const GalleryPics = () => {
   return (
     <div className="flex w-screen">
-      <div className="w-full">
-        <Header title="GALLERY" isRed={true} />
-        <div className="grid grid-cols-1 gap-6 px-5 md:grid-cols-4 md:px-30">
+      <div className="w-full mt-9 lg:mt-16 ">
+        <div className=" ml-10 mb-5 lg:ml-28 lg:mb-8 lg:mt-0 md:ml-28 md:mb-8 md:mt-14">
+          <Header title="GALLERY" isRed={true} />
+        </div>
+        <div className="grid grid-cols-1  gap-6 px-12 md:grid-cols-4 md:px-30">
           {images.map((img, idx) => {
             return (
               <img
