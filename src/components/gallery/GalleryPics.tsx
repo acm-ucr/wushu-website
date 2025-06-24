@@ -25,7 +25,7 @@ import image23 from "@/public/images/gallery/gallery_fan.webp";
 import image24 from "@/public/images/gallery/gallery_bottom.webp";
 import Header from "@/components/Header";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const images = [
   image1,
