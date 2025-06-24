@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Performance from "@/components/performances/Performance";
 import lefttriangle from "@/public/logos/lefttriangle.svg";
 import righttriangle from "@/public/logos/righttriangle.svg";
+
+import { motion } from "framer-motion";
 
 const Cards = () => {
   return (
@@ -72,9 +75,18 @@ const Cards = () => {
       </div>
 
       <div className="justify-left mt-10 w-full flex-col px-4 sm:mt-10 sm:px-4 md:mt-20 md:px-14 lg:mt-20 lg:px-14">
-        <div className="relative mb-3">
+        {/* <div className="relative mb-3 ml-7 ">
           <Header title="Performances" isRed={true} />
-        </div>
+        </div> */}
+        <motion.div
+          initial={{ opacity: 0, x: -20, y: -20 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="mb-5 ml-5 md:mt-24 md:mb-8 md:ml-12 lg:mt-0 lg:mb-8 lg:ml-14"
+        >
+          <Header title="Performances" isRed={true} />
+        </motion.div>
       </div>
 
       <div className="mt-20 sm:mt-20 md:mt-25 lg:mt-25">
