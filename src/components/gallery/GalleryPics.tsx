@@ -1,3 +1,4 @@
+"use client";
 import image1 from "@/public/images/gallery/gallery_1.webp";
 import image2 from "@/public/images/gallery/gallery_2.webp";
 import image3 from "@/public/images/gallery/gallery_3.webp";
@@ -23,6 +24,8 @@ import image22 from "@/public/images/gallery/gallery_group1.webp";
 import image23 from "@/public/images/gallery/gallery_fan.webp";
 import image24 from "@/public/images/gallery/gallery_bottom.webp";
 import Header from "@/components/Header";
+
+import { motion } from "framer-motion";
 
 const images = [
   image1,
@@ -51,20 +54,48 @@ const images = [
   image24,
 ];
 
+const rotate = {
+  initial: { rotateY: 270 },
+  whileInView: (i: number) => ({
+    rotateY: 360,
+    transition: {
+      duration: 1.2,
+      delay: (i % 4) * 0.3,
+    },
+  }),
+};
+
 const GalleryPics = () => {
   return (
     <div className="flex w-screen">
-      <div className="w-full">
-        <Header title="GALLERY" isRed={true} />
-        <div className="grid grid-cols-1 gap-6 px-5 md:grid-cols-4 md:px-30">
+      <div className="mt-9 w-full lg:mt-16">
+        <motion.div
+          initial={{ opacity: 0, x: -20, y: -20 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.7, dela: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="mb-5 ml-10 md:mt-14 md:mb-8 md:ml-28 lg:mt-0 lg:mb-8 lg:ml-28"
+        >
+          <Header title="GALLERY" isRed={true} />
+        </motion.div>
+
+        <div className="grid grid-cols-1 gap-6 px-12 md:grid-cols-4 md:px-30">
           {images.map((img, idx) => {
             return (
-              <img
+              <motion.div
                 key={idx}
-                src={img.src}
-                alt={`Gallery image ${idx + 1}`}
-                className={`object-cover${idx === 20 || idx === 21 || idx === 23 ? "col-span-2" : ""}`}
-              />
+                variants={rotate}
+                initial="initial"
+                whileInView="whileInView"
+                custom={idx}
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                <img
+                  src={img.src}
+                  alt={`Gallery image ${idx + 1}`}
+                  className={`object-cover${idx === 20 || idx === 21 || idx === 23 ? "col-span-2" : ""}`}
+                />
+              </motion.div>
             );
           })}
         </div>
