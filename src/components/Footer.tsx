@@ -1,13 +1,22 @@
+"use client";
 import cloudfooter from "@/public/logos/cloudfooter.svg";
 import logo from "@/public/logos/logo.svg";
 import Link from "next/link";
 import Image from "next/image";
 import gold from "@/public/logos/goldcorners.svg";
-import { links } from "@/data/footer";
+import { links } from "@/data/FooterData";
+import { motion } from "motion/react";
 
+const HoverAnimation = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
+      {children}
+    </motion.div>
+  );
+};
 const Footer = () => {
   return (
-    <div className="relative w-full items-center">
+    <div className="relative w-full items-center pt-50 md:pt-0">
       <Image
         src={cloudfooter}
         alt="cloudfooter"
@@ -35,10 +44,12 @@ const Footer = () => {
             />
           </div>
 
-          {links.map((item, index) => (
-            <Link href={item.link} target="_blank" key={index} className="">
-              <Image src={item.icon} alt="" />
-            </Link>
+          {links.map(({ link, icon }, index) => (
+            <HoverAnimation key={index}>
+              <Link href={link} target="_blank" key={index} className="">
+                <Image src={icon} alt="" />
+              </Link>
+            </HoverAnimation>
           ))}
           <div className="md:hidden">
             <Image
