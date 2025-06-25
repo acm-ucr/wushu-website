@@ -1,5 +1,6 @@
 "use client";
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 
 interface PerformanceProps {
@@ -32,20 +33,19 @@ const Performance = ({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`mt-15 flex items-center sm:mt-20 md:mt-30 md:flex-row ${
-        imageOnLeft
-          ? "flex md:flex-row"
-          : "flex-row-reverse md:flex-row-reverse"
-      }`}
+      className={`mt-16 flex flex-row items-center justify-center gap-x-[5%] sm:gap-x-10 md:gap-x-16 lg:gap-x-[20%] ${imageOnLeft ? "" : "flex-row-reverse"}`}
     >
-      <div className="flex justify-center px-6 sm:px-10 md:w-1/2 md:px-14">
-        <img
-          src={imageSrc}
-          alt={title}
-          className="min-h-sm w-full max-w-xs object-contain sm:max-w-md"
-        />
+      <div
+        className={`relative aspect-[5/3] w-[45%] max-w-xs sm:max-w-sm md:max-w-md ${
+          imageOnLeft
+            ? "-translate-x-[4%] md:translate-x-[4%] lg:translate-x-[20%]"
+            : "translate-x-[4%] md:-translate-x-[4%] lg:-translate-x-[20%]"
+        } transition-transform duration-500`}
+      >
+        <Image src={imageSrc} alt={title} fill className="object-contain" />
       </div>
-      <div className="w-full px-1 text-left sm:px-6 md:w-1/2 md:px-14">
+
+      <div className="w-[45%] px-2 text-left sm:px-6 md:w-[55%] lg:w-[40%]">
         <div className="text-wushu-red-100 font-arimo text-sm font-bold italic sm:text-lg">
           {title}
         </div>
